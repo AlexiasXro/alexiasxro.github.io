@@ -11,11 +11,11 @@
 
     gtag('config', 'G-7Z6G8LFJYQ');
   </script>
-  
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi Portafolio - [Tu Nombre]</title>
-  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <link href="./tailwind.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -32,22 +32,136 @@
     </ul>
   </nav>
 
-  <main class="pt-24 px-4 max-w-4xl mx-auto space-y-16">
+  <main class="  ">
 
     <!-- Inicio -->
-    <section id="home" class="text-center">
-      <h1 class="text-3xl font-bold mb-2">Hola Soy Alejandra Romina Cáceres</h1>
-      <p class="text-gray-600 text-lg">Desarrolladora de Software | Apasionada por la seguridad Informatica</p>
-      <p class="mt-4 text-sm">¿Cuál es tu especialidad? ¿Qué mensaje querés dejarle al visitante?
-        Soy desarrolladora de software con enfoque en soluciones web centradas en el usuario. Me especializo en
-        construir interfaces intuitivas y funcionales usando tecnologías modernas como Laravel, Tailwind CSS y
-        herramientas de diseño como Figma y Adobe Suite.
-
-        Trabajo con empresas que buscan digitalizarse y destacarse. Si buscás a alguien que entienda tanto la lógica del
-        código como la experiencia del usuario, estás en el lugar correcto. Estoy abierta a nuevas oportunidades y
-        desafíos.
-      </p>
+    <section id="home" class="relative h-screen bg-cover bg-center flex items-center justify-center text-white"
+      style="background-image: url('https://images.unsplash.com/photo-1481151500463-1fa2dd2d5dbe?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b2ZpY2luYSUyMG9zY3VyYXxlbnwwfHwwfHx8MA%3D%3D');">
+      <div class="bg-black bg-opacity-60 p-8 rounded-lg text-center max-w-2xl">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4">Hola Soy Alejandra Romina Cáceres</h1>
+        <p class="text-lg md:text-xl">Desarrolladora de Software | Apasionada por la seguridad informática</p>
+        <p class="mt-4 text-sm text-gray-200">
+          Soy desarrolladora de software con enfoque en soluciones web centradas en el usuario. Me especializo en
+          construir interfaces intuitivas y funcionales usando tecnologías modernas como Laravel, Tailwind CSS y
+          herramientas de diseño como Figma y Adobe Suite. [...]
+        </p>
+      </div>
     </section>
+
+    <section id="sobre-mi" class=" px-4">
+
+      <!-- Contenedor 1: Sobre mí -->
+      <div class="bg-white p-6  flex items-center justify-center min-h-[400px] ">
+        <div class="flex flex-col md:flex-row justify-around items-start space-y-6 md:space-y-0 md:space-x-6">
+
+          <!-- Bloque 1 -->
+          <div class="flex items-start space-x-4 max-w-sm">
+            <img src="https://cdn.jsdelivr.net/npm/lucide@latest/icons/code.svg" alt="Ícono"
+              class="w-10 h-10 text-blue-500" />
+            <p class="text-gray-700">Me apasiona resolver problemas con código y construir soluciones que funcionen en
+              el mundo real. Siempre busco aprender más.</p>
+          </div>
+
+          <!-- Bloque 2 -->
+          <div class="flex items-start space-x-4 max-w-sm">
+            <img src="https://cdn.jsdelivr.net/npm/lucide@latest/icons/users.svg" alt="Ícono"
+              class="w-10 h-10 text-blue-500" />
+            <p class="text-gray-700">Trabajo muy bien en equipo, aportando ideas, escuchando y colaborando. Disfruto
+              compartir conocimiento y crecer junto a otros.</p>
+          </div>
+
+          <!-- Bloque 3 -->
+          <div class="flex items-start space-x-4 max-w-sm">
+            <img src="https://cdn.jsdelivr.net/npm/lucide@latest/icons/layers.svg" alt="Ícono"
+              class="w-10 h-10 text-blue-500" />
+            <p class="text-gray-700">Tengo una mirada integral del desarrollo: pienso en el usuario, el diseño, la
+              arquitectura del sistema y cómo mantenerlo a largo plazo.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Contenedor 2: Carrusel -->
+      <div class="bg-gray-800 p-6   text-white flex items-center justify-center min-h-[400px]">
+        <h3 class="text-xl font-semibold mb-4">Más sobre mi perfil</h3>
+        <div id="carousel" class="relative w-full" data-carousel="slide" data-carousel-interval="4000">
+          <!-- Carousel wrapper -->
+          <div class="relative h-56 overflow-hidden rounded-lg">
+            <!-- Slide 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <div class="flex items-center justify-center h-full">
+                <p class="text-center text-lg">✨ Me apasiona resolver problemas complejos con soluciones simples.</p>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <div class="flex items-center justify-center h-full">
+                <p class="text-center text-lg">🎯 En cada proyecto busco mejorar la experiencia del usuario.</p>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <div class="flex items-center justify-center h-full">
+                <p class="text-center text-lg">🛠️ Manejo herramientas modernas de desarrollo y diseño.</p>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <div class="flex items-center justify-center h-full">
+                <p class="text-center text-lg">🚀 Me motiva crecer junto a equipos que compartan visión y valores.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Indicators opcionales -->
+          <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3">
+            <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-current="true" aria-label="Slide 1"
+              data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-label="Slide 2"
+              data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-label="Slide 3"
+              data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-label="Slide 4"
+              data-carousel-slide-to="3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const carousel = document.querySelector('[data-carousel="slide"]');
+      let items = carousel.querySelectorAll('[data-carousel-item]');
+      let index = 0;
+
+      setInterval(() => {
+        items[index].classList.add('hidden');
+        index = (index + 1) % items.length;
+        items[index].classList.remove('hidden');
+      }, 4000); // cambia cada 4 segundos
+    </script>
+
+    <!-- Galería de Portafolio -->
+    <div class="bg-gray-900  p-6 min-h-[600px]">
+      <h2 class="text-2xl font-semibold border-b pb-2 mb-8 text-center">Portafolio</h2>
+
+      <div class="grid grid-cols-3 gap-4 mb-4">
+        <!-- 3 imágenes pequeñas arriba -->
+        <img src="https://via.placeholder.com/150" alt="Proyecto 1" class="w-full h-32 object-cover border
+        " />
+        <img src="https://via.placeholder.com/150" alt="Proyecto 2" class="w-full h-32 object-cover border
+        " />
+        <img src="https://via.placeholder.com/150" alt="Proyecto 3" class="w-full h-32 object-cover border
+        " />
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <!-- 2 imágenes grandes abajo -->
+        <img src="https://via.placeholder.com/300x200" alt="Proyecto Grande 1" class="w-full h-48 object-cover border
+        " />
+        <img src="https://via.placeholder.com/300x200" alt="Proyecto Grande 2" class="w-full h-48 object-cover border
+        " />
+      </div>
+    </div>
+
 
     <!-- Sobre mí -->
     <section id="sobre-mi">
