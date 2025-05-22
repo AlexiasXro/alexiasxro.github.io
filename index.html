@@ -19,10 +19,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-800 text-gray-200 font-sans">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow p-4 fixed top-0 w-full z-50">
+  <nav class=" bg-gray-800/60 shadow p-4 fixed top-0 w-full z-50">
     <ul class="flex justify-center space-x-6 font-semibold text-sm">
       <li><a href="#home" class="hover:text-blue-500">Inicio</a></li>
       <li><a href="#sobre-mi" class="hover:text-blue-500">Sobre mí</a></li>
@@ -39,108 +39,164 @@
       style="background-image: url('https://images.unsplash.com/photo-1481151500463-1fa2dd2d5dbe?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8b2ZpY2luYSUyMG9zY3VyYXxlbnwwfHwwfHx8MA%3D%3D');">
       <div class="bg-black bg-opacity-60 p-8 rounded-lg text-center max-w-2xl">
         <h1 class="text-3xl md:text-4xl font-bold mb-4">Hola Soy Alejandra Romina Cáceres</h1>
-        <p class="text-lg md:text-xl">Desarrolladora de Software | Apasionada por la seguridad informática</p>
-        <p class="mt-4 text-sm text-gray-200">
-          Soy desarrolladora de software con enfoque en soluciones web centradas en el usuario. Me especializo en
-          construir interfaces intuitivas y funcionales usando tecnologías modernas como Laravel, Tailwind CSS y
-          herramientas de diseño como Figma y Adobe Suite. [...]
-        </p>
+        <p class="text-lg md:text-1xl">Desarrolladora de Software | Apasionada por la seguridad informática</p>
       </div>
     </section>
 
-    <section id="sobre-mi" class=" px-4">
+    <section id="sobre-mi" class="">
 
       <!-- Contenedor 1: Sobre mí -->
-      <div class="bg-white p-6  flex items-center justify-center min-h-[400px] ">
+      <div class=" p-6  flex items-center justify-center min-h-[400px] ">
         <div class="flex flex-col md:flex-row justify-around items-start space-y-6 md:space-y-0 md:space-x-6">
 
-          <!-- Bloque 1 -->
-          <div class="flex items-start space-x-4 max-w-sm">
-            <img src="https://cdn.jsdelivr.net/npm/lucide@latest/icons/code.svg" alt="Ícono"
-              class="w-10 h-10 text-blue-500" />
-            <p class="text-gray-700">Me apasiona resolver problemas con código y construir soluciones que funcionen en
-              el mundo real. Siempre busco aprender más.</p>
-          </div>
+          <div class="grid md:grid-cols-3 gap-6 text-gray-700">
 
-          <!-- Bloque 2 -->
-          <div class="flex items-start space-x-4 max-w-sm">
-            <img src="https://cdn.jsdelivr.net/npm/lucide@latest/icons/users.svg" alt="Ícono"
-              class="w-10 h-10 text-blue-500" />
-            <p class="text-gray-700">Trabajo muy bien en equipo, aportando ideas, escuchando y colaborando. Disfruto
-              compartir conocimiento y crecer junto a otros.</p>
-          </div>
+            <!-- Tarjeta 1 Icono código -->
+            <div class=" p-4">
+              <div class="flex items-center space-x-3 mb-2">
 
-          <!-- Bloque 3 -->
-          <div class="flex items-start space-x-4 max-w-sm">
-            <img src="https://cdn.jsdelivr.net/npm/lucide@latest/icons/layers.svg" alt="Ícono"
-              class="w-10 h-10 text-blue-500" />
-            <p class="text-gray-700">Tengo una mirada integral del desarrollo: pienso en el usuario, el diseño, la
-              arquitectura del sistema y cómo mantenerlo a largo plazo.</p>
+                <div class="border border-white rounded-full p-3">
+                  <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-red-600">Compromiso con la solución</h3>
+              </div>
+              <p class="text-base text-gray-300">
+                Me enfoco en resolver problemas, investigando y aprendiendo de cada desafío.
+              </p>
+              <details class="mt-2 text-base text-gray-300">
+                <summary class="cursor-pointer text-red-500">Leer más</summary>
+                Aunque no siempre tengo todas las respuestas, busco soluciones junto al equipo y comprendo al cliente
+                más allá del código.
+              </details>
+            </div>
+
+            <!-- Tarjeta 2 Icono equipo-->
+            <div class=" p-4">
+              <div class="flex items-center space-x-3 mb-2">
+
+                <div class="border border-white rounded-full p-3">
+                  <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-red-600">Trabajo en equipo</h3>
+              </div>
+              <p class="text-base text-gray-300">
+                Valoro el aprendizaje colectivo y compartir conocimiento.
+              </p>
+              <details class="mt-2 text-base text-gray-300">
+                <summary class="cursor-pointer text-red-500">Leer más</summary>
+                Cuando algo no me sale, investigo, pregunto y me apoyo en el equipo. Ser desarrolladora es construir en
+                conjunto.
+              </details>
+            </div>
+
+            <!-- Tarjeta 3 Icono testing-->
+            <div class=" p-4">
+              <div class="flex items-center space-x-3 mb-2">
+                <div class="border border-white rounded-full p-3">
+                  <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" />
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold text-red-600">Organización y mejora continua</h3>
+              </div>
+              <p class="text-base text-gray-300">
+                Utilizo herramientas para testeo, diseño y documentación que fortalecen mi desarrollo.
+              </p>
+              <details class="mt-2 text-base text-gray-300">
+                <summary class="cursor-pointer text-red-500">Leer más</summary>
+                Aunque ciertos lenguajes me cuesten al inicio, los enfrento con resiliencia y estructura.
+              </details>
+            </div>
+
           </div>
 
         </div>
       </div>
 
-      <!-- Contenedor 2: Carrusel -->
-      <div class="bg-gray-800 p-6   text-white flex items-center justify-center min-h-[400px]">
-        <h3 class="text-xl font-semibold mb-4">Más sobre mi perfil</h3>
-        <div id="carousel" class="relative w-full" data-carousel="slide" data-carousel-interval="4000">
-          <!-- Carousel wrapper -->
-          <div class="relative h-56 overflow-hidden rounded-lg">
-            <!-- Slide 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <div class="flex items-center justify-center h-full">
-                <p class="text-center text-lg">✨ Me apasiona resolver problemas complejos con soluciones simples.</p>
-              </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <div class="flex items-center justify-center h-full">
-                <p class="text-center text-lg">🎯 En cada proyecto busco mejorar la experiencia del usuario.</p>
-              </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <div class="flex items-center justify-center h-full">
-                <p class="text-center text-lg">🛠️ Manejo herramientas modernas de desarrollo y diseño.</p>
-              </div>
-            </div>
-            <!-- Slide 4 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <div class="flex items-center justify-center h-full">
-                <p class="text-center text-lg">🚀 Me motiva crecer junto a equipos que compartan visión y valores.</p>
-              </div>
+      <!-- Contenedor 2: barra de conocimiento en cada stack con animación de carga -->
+      <div class="flex flex-col md:flex-row items-center justify-between bg-gray-950 text-gray-300 p-10 min-h-[500px]">
+
+        <!-- Contenedor izquierdo: texto -->
+        <div class="md:w-1/2 w-full mb-10 md:mb-0 px-8">
+          <h1 class="text-4xl font-bold text-gray-300 mb-4">Mis Tecnologías</h1>
+          <h2 class="text-2xl font-semibold text-red-500 mb-2">Conocimiento técnico y herramientas</h2>
+          <p class="text-gray-300 text-lg">
+            Manejo tecnologías de frontend, backend y diseño con enfoque en la eficiencia, organización y trabajo en
+            equipo.
+            Me gusta analizar, entender al cliente y desarrollar soluciones funcionales, siempre aprendiendo y
+            adaptándome.
+          </p>
+        </div>
+
+        <!-- Contenedor derecho: gráfico de barras -->
+        <div class="md:w-1/2 w-full px-8">
+
+          <!-- Item -->
+          <div class="mb-4">
+            <p class="mb-1">HTML / CSS / JavaScript (Frontend)</p>
+            <div class="w-full bg-gray-700 rounded-full h-1">
+              <div class="bg-red-500 h-1 rounded-full w-[90%] transition-all duration-1000"></div>
             </div>
           </div>
-          <!-- Indicators opcionales -->
-          <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3">
-            <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-current="true" aria-label="Slide 1"
-              data-carousel-slide-to="0"></button>
-            <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-label="Slide 2"
-              data-carousel-slide-to="1"></button>
-            <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-label="Slide 3"
-              data-carousel-slide-to="2"></button>
-            <button type="button" class="w-3 h-3 rounded-full bg-white/50" aria-label="Slide 4"
-              data-carousel-slide-to="3"></button>
+
+          <div class="mb-4">
+            <p class="mb-1">PHP (Backend)</p>
+            <div class="w-full bg-gray-700 rounded-full h-1">
+              <div class="bg-red-500 h-1 rounded-full w-[75%] transition-all duration-1000"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <p class="mb-1">MySQL / Apache / MariaDB (Base de Datos)</p>
+            <div class="w-full bg-gray-700 rounded-full h-1">
+              <div class="bg-red-500 h-1 rounded-full w-[80%] transition-all duration-1000"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <p class="mb-1">Java / Python</p>
+            <div class="w-full bg-gray-700 rounded-full h-1">
+              <div class="bg-red-500 h-1 rounded-full w-[65%] transition-all duration-1000"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <p class="mb-1">Laravel / Django / WordPress / Bootstrap / Tailwind / HTMX</p>
+            <div class="w-full bg-gray-700 rounded-full h-1">
+              <div class="bg-red-500 h-1 rounded-full w-[85%] transition-all duration-1000"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <p class="mb-1">Adobe Suite / Figma (Diseño)</p>
+            <div class="w-full bg-gray-700 rounded-full h-1">
+              <div class="bg-red-500 h-1 rounded-full w-[90%] transition-all duration-1000"></div>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <p class="mb-1">Scrum / Kanban / XP / Agile (Metodologías)</p>
+            <div class="w-full bg-gray-700 rounded-full h-1">
+              <div class="bg-red-500 h-1 rounded-full w-[80%] transition-all duration-1000"></div>
+            </div>
           </div>
         </div>
       </div>
+
+
     </section>
 
-    <script>
-      const carousel = document.querySelector('[data-carousel="slide"]');
-      let items = carousel.querySelectorAll('[data-carousel-item]');
-      let index = 0;
 
-      setInterval(() => {
-        items[index].classList.add('hidden');
-        index = (index + 1) % items.length;
-        items[index].classList.remove('hidden');
-      }, 4000); // cambia cada 4 segundos
-    </script>
 
     <!-- Galería de Portafolio -->
-    <div class="bg-gray-900  p-6 min-h-[600px]">
+    <section class="bg-gray-900  p-6 min-h-[600px]">
       <h2 class="text-2xl font-semibold border-b pb-2 mb-8 text-center">Portafolio</h2>
 
       <div class="grid grid-cols-3 gap-4 mb-4">
@@ -160,96 +216,74 @@
         <img src="https://via.placeholder.com/300x200" alt="Proyecto Grande 2" class="w-full h-48 object-cover border
         " />
       </div>
-    </div>
-
-
-    <!-- Sobre mí -->
-    <section id="sobre-mi">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Sobre mí</h2>
-      <ul class="list-disc pl-5 space-y-2 text-gray-700">
-        <li>¿Quién sos y qué te motivó a ser desarrolladora?
-          <p>Soy una persona curiosa y con muchas ganas de aprender. Cuando algo no me sale, no me frustro: investigo,
-            pregunto y me apoyo en el equipo. Me gusta compartir lo que sé y también aprender de los demás.
-            Descubrí en la programación una forma de resolver problemas reales, pero también de conectarme con otras
-            personas. No siempre tengo la solución, pero siempre tengo la actitud para buscarla.
-            Para mí, ser desarrolladora es construir en conjunto, entender al usuario, y crecer con cada proyecto.</p>
-        </li>
-        <li>
-          <strong class="font-semibold">¿Qué tecnologías manejás (frontend, backend, diseño, etc.)?</strong>
-          <ul class="list-inside list-disc mt-2 text-gray-700">
-            <li><strong class="font-semibold">Desarrollo Frontend:</strong> HTML, CSS, JS</li>
-            <li><strong class="font-semibold">Desarrollo Backend:</strong> PHP</li>
-            <li><strong class="font-semibold">Gestión de Bases de Datos:</strong> MySQL, Apache, MariaDB</li>
-            <li><strong class="font-semibold">Lenguajes adicionales:</strong> Java, Python</li>
-            <li><strong class="font-semibold">Frameworks:</strong> Laravel, Django, WordPress, Bootstrap, Tailwind, HTMX
-            </li>
-            <li><strong class="font-semibold">Herramientas de Diseño:</strong> Adobe Creative Suite, Figma</li>
-            <li><strong class="font-semibold">Metodologías de Desarrollo de Software:</strong> Scrum, Kanban, Extreme
-              Programming (XP), Agile</li>
-          </ul>
-
-        </li>
-
-        <li>¿Qué te diferencia como profesional?
-          <p>
-            Me diferencio por mi compromiso con hacer que las cosas funcionen. Aunque no siempre tengo todas las
-            respuestas, me esfuerzo por investigar, aprender y buscar soluciones en conjunto con el equipo.
-            Soy organizada y me gusta anticiparme a los posibles problemas, por eso suelo adelantar tareas para evitar
-            contratiempos. Me apasiona el análisis de sistemas y entender lo que necesita el cliente, más allá de
-            simplemente programar.
-            Disfruto del proceso de prueba y error, y me apoyo en herramientas de testing y depuración para mejorar el
-            producto.
-            Manejo bien herramientas de diseño y documentación, y aunque a veces me cuesta mantenerme actualizada o ser
-            flexible con ciertos lenguajes, compenso con dedicación, curiosidad y una actitud resiliente frente a los
-            desafíos.
-          </p>
-        </li>
-      </ul>
     </section>
 
-    <!-- Proyectos -->
-    <section id="proyectos">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Proyectos</h2>
-      <ul class="list-disc pl-5 space-y-2 text-gray-700">
-        <li>¿Qué proyectos has desarrollado? (incluí links si es posible)
-          https://github.com/AlexiasXro/Abba-shoes.github.io
-        </li>
-        <li>¿Qué tecnologías usaste en cada uno?</li>
-        <li>¿Cuál fue tu rol y qué desafíos enfrentaste?</li>
-        <li>¿Qué aprendiste con cada proyecto?</li>
-      </ul>
+    <section
+      class="bg-gray-950 p-6 min-h-[600px] flex gap-8 flex flex-col md:flex-row justify-around items-start space-y-6 md:space-y-0 md:space-x-6">
+      <!-- Iconos -->
+      <div class="flex flex-col items-start text-white space-y-4 p-6">
+        <!-- Teléfono -->
+        <div class="flex items-center space-x-4">
+          <div class="border border-white rounded-full p-3">
+            <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M7.978 4a2.553 2.553 0 0 0-1.926.877C4.233 6.7 3.699 8.751 4.153 10.814c.44 1.995 1.778 3.893 3.456 5.572 1.68 1.679 3.577 3.018 5.57 3.459 2.062.456 4.115-.073 5.94-1.885a2.556 2.556 0 0 0 .001-3.861l-1.21-1.21a2.689 2.689 0 0 0-3.802 0l-.617.618a.806.806 0 0 1-1.14 0l-1.854-1.855a.807.807 0 0 1 0-1.14l.618-.62a2.692 2.692 0 0 0 0-3.803l-1.21-1.211A2.555 2.555 0 0 0 7.978 4Z" />
+            </svg>
+          </div>
+          <span class="text-white text-ls">+5493644454650</span>
+        </div>
+
+        <!-- Correo -->
+        <div class="flex items-center space-x-4">
+          <div class="border border-white rounded-full p-3">
+            <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M17 6h-2V5h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2h-.541A5.965 5.965 0 0 1 14 10v4a1 1 0 1 1-2 0v-4c0-2.206-1.794-4-4-4-.075 0-.148.012-.22.028C7.686 6.022 7.596 6 7.5 6A4.505 4.505 0 0 0 3 10.5V16a1 1 0 0 0 1 1h7v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3h5a1 1 0 0 0 1-1v-6c0-2.206-1.794-4-4-4Zm-9 8.5H7a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2Z" />
+            </svg>
+          </div>
+          <span class="text-white text-ls">caceres299romina@hotmail.com</span>
+        </div>
+
+        <!-- GitHub -->
+        <div class="flex items-center space-x-4">
+          <div class="border border-white rounded-full p-3">
+            <svg class="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z" />
+            </svg>
+          </div>
+          <span class="text-white text-ls">AlexiasXro</span>
+        </div>
+      </div>
+
+
+      <!-- Formulario -->
+      <div class="border p-6   w-full max-w-md">
+        <form>
+          <div class="mb-4">
+            <label class="block text-gray-700">Nombre</label>
+            <input type="text" class="w-full border border-gray-300 p-2 rounded" />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700">Correo</label>
+            <input type="email" class="w-full border border-gray-300 p-2 rounded" />
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700">Mensaje</label>
+            <textarea class="w-full border border-gray-300 p-2 rounded"></textarea>
+          </div>
+          <button type="submit" class="bg-red-500 text-white px-4 py-2 w-full">Enviar</button>
+        </form>
+      </div>
     </section>
 
-    <!-- Experiencia / CV -->
-    <section id="cv">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Experiencia</h2>
-      <ul class="list-disc pl-5 space-y-2 text-gray-700">
-        <li>¿Dónde trabajaste o colaboraste? (empresa, freelance, proyectos)</li>
-        <li>¿Qué funciones cumpliste?</li>
-        <li>¿Qué logros podés destacar?</li>
-        <li>¿Tenés certificaciones, cursos o estudios relevantes?</li>
-      </ul>
-    </section>
 
-    <!-- Contacto -->
-    <section id="contacto">
-      <h2 class="text-2xl font-semibold border-b pb-2 mb-4">Contacto</h2>
-      <ul class="list-disc pl-5 space-y-2 text-gray-700">
-        <li>¿Cómo pueden contactarte? (email, LinkedIn, GitHub, etc.)</li>
-        <li>¿Qué tipo de oportunidades estás buscando?</li>
-        <li>¿Estás disponible para remoto, freelance o tiempo completo?</li>
-      </ul>
-    </section>
+    <!-- Footer -->
+    <footer class="text-center text-sm py-6 text-gray-500">
+      © 2025 Alejandra Romina Cáceres | Desarrolladora de Software
+    </footer>
 
-  </main>
 
-  <!-- Footer -->
-  <footer class="text-center text-sm py-6 text-gray-500">
-    © 2025 [Tu Nombre] | Desarrolladora de Software
-  </footer>
-
-  <!-- Flowbite script -->
-  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
 
 </html>
