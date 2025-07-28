@@ -1,0 +1,15 @@
+# Node.js
+node_modules/
+package-lock.json
+
+# Tailwind CSS CLI build output (si usás una carpeta como `dist` o `public/css`)
+dist/
+public/css/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# IDEs comunes
+.vscode/
+.idea/
