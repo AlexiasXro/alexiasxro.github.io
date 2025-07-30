@@ -346,80 +346,155 @@
 
 
     <!-- Sección de proyectos -->
-    <section id="proyectos" class="bg-neutral-900 text-neutral-100 py-16 h-screen">
+    <section id="proyectos" class="bg-neutral-900 text-neutral-100 py-16 px-2 sm:px-4">
+      <div class="max-w-7xl mx-auto">
 
-      <!-- Contenedor centrado -->
-      <div class="max-w-7xl mx-auto px-4">
-
-        <!-- Título de la sección -->
-        <h2 class="text-4xl font-semibold text-center text-rose-500 mb-10">Proyectos Destacados</h2>
+        <h2 class="text-3xl sm:text-4xl font-semibold text-center text-rose-500 mb-10">
+          Proyectos Destacados
+        </h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <!-- Proyecto 1 -->
-          <div class="proyecto bg-neutral-900 p-4 rounded shadow">
-            <img src="./img/frontAbba.png" alt="Proyecto Tienda Shoes"
-              class="rounded object-contain w-full h-56 mb-4" />
-            <div class="flex flex-col gap-2">
-              <a href="https://tiendashoes-abba.netlify.app/" target="_blank"
-                class="block px-4 py-2 bg-neutral-800 border border-rose-600 hover:bg-rose-900 text-white text-center rounded-xs font-normal transition">
-                Ver página
-              </a>
-              <a href="#detalle-front-abba"
-                class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition">
-                Ver detalles técnicos
-              </a>
+          <div class="proyecto bg-neutral-900 p-4 rounded shadow relative">
+            <!-- Contenedor de imagen con overlay -->
+            <div class="relative">
+              <img src="./img/frontAbba.png" alt="Proyecto Tienda Shoes"
+                class="rounded object-contain w-full h-56 mb-4" />
+
+              <!-- Overlay oculto inicialmente -->
+              <div id="overlay-front-abba"
+                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center">
+                <ul class="list-disc pl-5">
+                  <li>Desarrollado con HTML5, CSS3, Bootstrap y JavaScript puro</li>
+                  <li>Frontend estático, ideal para hosting gratuito</li>
+                  <li>Diseño 100% responsive para adaptarse a móviles y tablets</li>
+                  <li>Incluye formulario de inicio de sesión para acceso al panel administrador</li>
+                  <li>Reto: mantener toda la app estática para máxima eficiencia y simplicidad</li>
+                </ul>
+              </div>
+
+
+              <!-- Botones -->
+              <div class="flex flex-col gap-2">
+                <a href="https://tiendashoes-abba.netlify.app/" target="_blank"
+                  class="block px-4 py-2 bg-neutral-800 border border-rose-600 hover:bg-rose-900 text-white text-center rounded-xs font-normal transition">
+                  Ver página
+                </a>
+                <button data-toggle-overlay="front-abba"
+                  class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition">
+                  Ver detalles técnicos
+                </button>
+
+              </div>
             </div>
           </div>
 
+
           <!-- Proyecto 2 -->
-          <div class="proyecto bg-neutral-900 p-4 rounded shadow ">
-            <img src="./img/EventoAnime.png" alt="Proyecto Fan Eventos"
-              class="rounded object-contain w-full h-56 mb-4" />
+          <!-- Proyecto 2 -->
+          <div class="proyecto bg-neutral-900 p-4 rounded shadow relative">
+            <div class="relative">
+              <img src="./img/EventoAnime.png" alt="Proyecto Fan Eventos"
+                class="rounded object-contain w-full h-56 mb-4" />
+              <div id="overlay-fan-eventos"
+                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center">
+                <ul class="list-disc pl-5">
+                  <li>Desarrollado con HTML, Tailwind CSS y JavaScript puro</li>
+                  <li>Interfaz con botones para inscripción y acceso a información</li>
+                  <li>Integración con Google Formularios y Documentos para gestión de inscripciones</li>
+                  <li>Temporizador que controla el cierre automático de inscripciones y oculta el formulario</li>
+                  <li>Incluye mapa del lugar con Google Maps y seguimiento con Google Analytics</li>
+                  <li>Sitio estático sin backend ni base de datos</li>
+                </ul>
+              </div>
+            </div>
             <div class="flex flex-col gap-2">
               <a href="https://faneventos.netlify.app/" target="_blank"
                 class="block px-4 py-2 bg-neutral-800 border border-rose-600 hover:bg-rose-900 text-white text-center rounded-xs font-normal transition">
                 Ver página
               </a>
-              <a href="#detalle-fan-eventos"
+              <button data-toggle-overlay="fan-eventos"
                 class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition">
                 Ver detalles técnicos
-              </a>
+              </button>
             </div>
           </div>
 
+
           <!-- Proyecto 3 (sin hosting, fullstack local) -->
-          <div class="proyecto bg-neutral-900 p-4 rounded shadow">
-            <img src="./img/gestor.png" alt="Proyecto Gestor" class="rounded object-contain w-full h-56 mb-4" />
+          <div class="proyecto bg-neutral-900 p-4 rounded shadow relative">
+            <div class="relative">
+              <img src="./img/gestor.png" alt="Proyecto Gestor" class="rounded object-contain w-full h-56 mb-4" />
+              <div id="overlay-gestor"
+                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center">
+                <ul class="list-disc pl-5">
+                  <li>Aplicación fullstack desarrollada con Laravel 11 y Blade</li>
+                  <li>Frontend con Bootstrap para interfaz responsiva y funcional</li>
+                  <li>Funcionalidades clave: gestión de compras, proveedores, clientes, ventas e inventarios</li>
+                  <li>Incluye reportes, análisis de egresos y cierres de caja</li>
+                  <li>Implementa autenticación, roles y soft delete para manejo seguro de datos</li>
+                  <li>Dashboard personalizado para control y monitoreo eficiente</li>
+                  <li>En producción y en uso en una empresa, automatizando áreas clave y preparando expansión online y
+                    con revendedores</li>
+                </ul>
+              </div>
+            </div>
             <div class="flex flex-col gap-2">
-              <a href="#detalle-gestor"
-                class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition">
-                Ver detalles técnicos
-              </a>
-              <!-- Botón demo opcional -->
 
               <a href="ruta-a-video-o-repo" target="_blank"
                 class="block px-4 py-2 bg-neutral-800 border border-rose-600 hover:bg-rose-900 text-white text-center rounded-xs font-normal transition">
                 Ver demo
               </a>
-
+              <button data-toggle-overlay="gestor"
+                class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition mt-2">
+                Ver detalles técnicos
+              </button>
             </div>
           </div>
 
-          <!-- Proyecto 4 (placeholder o en desarrollo) -->
-          <div class="proyecto bg-neutral-900 p-4 rounded shadow">
-            <img src="https://via.placeholder.com/300x200/ff7f7f/333" alt="Proyecto Placeholder"
-              class="rounded object-contain w-full h-56 mb-4" />
+          <!-- Proyecto 4 (factura lite) -->
+          <div class="proyecto bg-neutral-900 p-4 rounded shadow relative">
+            <div class="relative">
+              <img src="https://via.placeholder.com/300x200/ff7f7f/333" alt="Proyecto Placeholder"
+                class="rounded object-contain w-full h-56 mb-4" />
+              <div id="overlay-proyecto4"
+                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center">
+                <ul class="list-disc pl-5">
+                  <li>Aplicación web en desarrollo con Laravel 11, Blade y Tailwind CSS</li>
+                  <li>Funcionalidad principal: emisión de facturas y remitos automatizados</li>
+                  <li>Automatiza carga de información del comprador y procesos contables dentro de la factura</li>
+                  <li>Planea integración futura con AFIP o ARCA para gestión fiscal</li>
+                  <li>Cuenta con prototipos en Figma y frontend básico con suma de productos</li>
+                  <li>Actualmente en desarrollo activo, con funcionalidades en expansión</li>
+                </ul>
+
+              </div>
+            </div>
             <div class="flex flex-col gap-2">
               <a href="#detalle-proyecto4"
                 class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition">
-                Ver detalles técnicos
+                Ver demo
               </a>
+              <button data-toggle-overlay="proyecto4"
+                class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition mt-2">
+                Ver detalles técnicos
+              </button>
             </div>
           </div>
 
         </div>
-      </div>
-
+        <script>
+          // Escucha todos los clicks en botones con data-toggle-overlay
+          document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('button[data-toggle-overlay]').forEach(btn => {
+              btn.addEventListener('click', () => {
+                const id = btn.getAttribute('data-toggle-overlay');
+                const overlay = document.getElementById('overlay-' + id);
+                if (overlay) overlay.classList.toggle('hidden');
+              });
+            });
+          });
+        </script>
     </section>
 
     <!-- R&N -->
@@ -486,7 +561,8 @@
                       d="M17 6h-2V5h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2h-.541A5.965 5.965 0 0 1 14 10v4a1 1 0 1 1-2 0v-4c0-2.206-1.794-4-4-4-.075 0-.148.012-.22.028C7.686 6.022 7.596 6 7.5 6A4.505 4.505 0 0 0 3 10.5V16a1 1 0 0 0 1 1h7v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3h5a1 1 0 0 0 1-1v-6c0-2.206-1.794-4-4-4Zm-9 8.5H7a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2Z" />
                   </svg>
                 </div>
-                <span class="text-neutral-100 text-ls hover:text-rose-400 transition-colors">caceres299romina@hotmail.com</span>
+                <span
+                  class="text-neutral-100 text-ls hover:text-rose-400 transition-colors">caceres299romina@hotmail.com</span>
               </a>
               <button onclick="copyText('email-address')"
                 class="p-1 hover:bg-rose-500/50 rounded-full transition-colors" title="Copiar correo" type="button">
