@@ -48,7 +48,7 @@
 
 
         <a href="https://wa.me/5493644454650" target="_blank" rel="noopener noreferrer"
-  class="mt-6 inline-flex items-center gap-2 px-4 py-2 bg-rose-600 hover:bg-rose-500 text-white text-center rounded-md font-medium transition"
+  class="mt-6 inline-flex items-center gap-2 px-4 py-2 border border-rose-600 hover:bg-rose-500/80 text-white text-center  font-medium transition"
   data-aos="fade-up" data-aos-delay="300">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-5 h-5" />
   Contactá
@@ -345,6 +345,82 @@
       });
     </script>
 
+    <!-- Sección: Skills Analista de Sistemas -->
+<section id="habilidades" class="bg-neutral-850 text-neutral-400 py-16">
+
+  <div class="max-w-6xl mx-auto px-4">
+
+    <div class="flex flex-col md:flex-row items-center justify-between min-h-[500px]">
+
+      <!-- Texto -->
+      <div class="md:w-1/2 w-full mb-10 md:mb-0 px-8">
+        <h1 class="text-4xl font-bold text-neutral-300 mb-4">Competencias en Sistemas</h1>
+        <h2 class="text-2xl font-semibold text-rose-500 mb-2">Analista de Datos y Sistemas</h2>
+        <p class="text-neutral-300 text-lg">
+          Experiencia en análisis de datos, gestión de bases de datos y visualización de información para la toma de decisiones.
+          Manejo herramientas de programación, modelado y reporting con enfoque en eficiencia y claridad.
+        </p>
+      </div>
+
+      <!-- Gráfico de barras -->
+      <div class="md:w-1/2 w-full px-8">
+
+        <div id="skills-bars" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- SQL -->
+          <div>
+            <p class="mb-1">SQL</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="90%"></div>
+            </div>
+          </div>
+
+          <!-- Pandas -->
+          <div>
+            <p class="mb-1">Pandas</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
+            </div>
+          </div>
+
+          <!-- Power BI -->
+          <div>
+            <p class="mb-1">Power BI</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="80%"></div>
+            </div>
+          </div>
+
+          <!-- Excel Avanzado -->
+          <div>
+            <p class="mb-1">Excel Avanzado</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
+            </div>
+          </div>
+
+          <!-- Python -->
+          <div>
+            <p class="mb-1">Python</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="75%"></div>
+            </div>
+          </div>
+
+          <!-- Documentación / UML -->
+          <div>
+            <p class="mb-1">Documentación / UML</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="70%"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
     <!-- Sección de proyectos -->
@@ -365,14 +441,17 @@
 
               <!-- Overlay oculto inicialmente -->
               <div id="overlay-front-abba"
-                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center">
+                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center overflow-y-auto">
                 <ul class="list-disc pl-5">
-                  <li>Desarrollado con HTML5, CSS3, Bootstrap y JavaScript puro</li>
-                  <li>Frontend estático, ideal para hosting gratuito</li>
-                  <li>Diseño 100% responsive para adaptarse a móviles y tablets</li>
-                  <li>Incluye formulario de inicio de sesión para acceso al panel administrador</li>
-                  <li>Reto: mantener toda la app estática para máxima eficiencia y simplicidad</li>
+                
+                  <li>Desarrollado con <strong>HTML5, CSS3, Bootstrap</strong> y <strong>JavaScript puro</strong>.</li>
+                  <li>Frontend estático, ideal para <em>hosting gratuito</em>.</li>
+                  <li>Versión extendida con integración a <strong>Base de Datos MySQL</strong>.</li>
+                  <li>Diseño <strong>100% responsive</strong>, adaptado a móviles y tablets.</li>
+                  <li>Incluye formulario de inicio de sesión para acceso al panel de administración.</li>
+                  <li>Reto principal: mantener la aplicación estática para máxima eficiencia y simplicidad.</li>
                 </ul>
+                
               </div>
 
 
@@ -399,15 +478,18 @@
               <img src="./img/EventoAnime.png" alt="Proyecto Fan Eventos"
                 class="rounded object-contain w-full h-56 mb-4" />
               <div id="overlay-fan-eventos"
-                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center">
-                <ul class="list-disc pl-5">
-                  <li>Desarrollado con HTML, Tailwind CSS y JavaScript puro</li>
-                  <li>Interfaz con botones para inscripción y acceso a información</li>
-                  <li>Integración con Google Formularios y Documentos para gestión de inscripciones</li>
-                  <li>Temporizador que controla el cierre automático de inscripciones y oculta el formulario</li>
-                  <li>Incluye mapa del lugar con Google Maps y seguimiento con Google Analytics</li>
-                  <li>Sitio estático sin backend ni base de datos</li>
-                </ul>
+                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center overflow-y-auto">
+                
+                 <ul class="list-disc pl-5 text-neutral-300 ">
+  <li>Desarrollado con <strong>HTML</strong>, <strong>Tailwind CSS</strong> y <strong>JavaScript puro</strong>.</li>
+  <li>Interfaz con botones para inscripción y acceso a información.</li>
+  <li>Integración con <strong>Google Formularios</strong> y <strong>Google Documentos</strong> para gestión de inscripciones.</li>
+  <li>Temporizador que controla el cierre automático de inscripciones y oculta el formulario.</li>
+  <li>Incluye mapa del lugar con <strong>Google Maps</strong> y seguimiento mediante <strong>Google Analytics</strong>.</li>
+  <li>Sitio estático sin backend ni base de datos.</li>
+</ul>
+
+             
               </div>
             </div>
             <div class="flex flex-col gap-2">
@@ -428,17 +510,18 @@
             <div class="relative">
               <img src="./img/gestor.png" alt="Proyecto Gestor" class="rounded object-contain w-full h-56 mb-4" />
               <div id="overlay-gestor"
-                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center">
-                <ul class="list-disc pl-5">
-                  <li>Aplicación fullstack desarrollada con Laravel 11 y Blade</li>
-                  <li>Frontend con Bootstrap para interfaz responsiva y funcional</li>
-                  <li>Funcionalidades clave: gestión de compras, proveedores, clientes, ventas e inventarios</li>
-                  <li>Incluye reportes, análisis de egresos y cierres de caja</li>
-                  <li>Implementa autenticación, roles y soft delete para manejo seguro de datos</li>
-                  <li>Dashboard personalizado para control y monitoreo eficiente</li>
-                  <li>En producción y en uso en una empresa, automatizando áreas clave y preparando expansión online y
-                    con revendedores</li>
-                </ul>
+                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded  flex flex-col justify-center overflow-y-auto">
+                <ul class="list-disc pl-5 my-4 ">
+                 
+  <li>Aplicación <strong>fullstack</strong> desarrollada con <strong>Laravel 11</strong> y <strong>Blade</strong>.</li>
+  <li>Frontend con <strong>Bootstrap</strong> para una interfaz responsiva y funcional.</li>
+  <li>Funcionalidades clave: gestión de <strong>compras</strong>, <strong>proveedores</strong>, <strong>clientes</strong>, <strong>ventas</strong> e <strong>inventarios</strong>.</li>
+  <li>Incluye <strong>reportes</strong>, análisis de egresos y cierres de caja.</li>
+  <li>Implementa <strong>autenticación</strong>, <strong>roles</strong> y <strong>soft delete</strong> para manejo seguro de datos.</li>
+  <li><strong>Dashboard personalizado</strong> para control y monitoreo eficiente.</li>
+  <li>Actualmente en producción y en uso en una empresa, <strong>automatizando áreas clave</strong> y preparando expansión online con revendedores.</li>
+</ul>
+
               </div>
             </div>
             <div class="flex flex-col gap-2">
@@ -460,7 +543,7 @@
               <img src="https://via.placeholder.com/300x200/ff7f7f/333" alt="Proyecto Placeholder"
                 class="rounded object-contain w-full h-56 mb-4" />
               <div id="overlay-proyecto4"
-                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center">
+                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center overflow-y-auto">
                 <ul class="list-disc pl-5">
                   <li>Aplicación web en desarrollo con Laravel 11, Blade y Tailwind CSS</li>
                   <li>Funcionalidad principal: emisión de facturas y remitos automatizados</li>
@@ -579,14 +662,23 @@
 
 
               <!-- CV -->
-              <a href="/cv-alejandra-romina.pdf" download target="_blank"
+              <a href="/img/C_Alejandra_Romina_Curriculum Vitae-Des.pdf" download target="_blank"
                 class="flex items-center space-x-4 bg-neutral-800 hover:bg-rose-600 text-white px-4 py-2 rounded-md transition-transform hover:scale-105">
                 <div class="border border-white rounded-full p-2">
                   <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 16l4-5h-3V4h-2v7H8l4 5Zm-8 4h16v-2H4v2Z" />
                   </svg>
                 </div>
-                <span>Descargar CV</span>
+                <span>Programadora CV </span>
+              </a>
+              <a href="/img/Romina-A-Cáceres_CV-Analista_de _Datos.pdf" download target="_blank"
+                class="flex items-center space-x-4 bg-neutral-800 hover:bg-rose-600 text-white px-4 py-2 rounded-md transition-transform hover:scale-105">
+                <div class="border border-white rounded-full p-2">
+                  <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 16l4-5h-3V4h-2v7H8l4 5Zm-8 4h16v-2H4v2Z" />
+                  </svg>
+                </div>
+                <span>Analista de Datos CV </span>
               </a>
 
             </div>
@@ -594,24 +686,24 @@
 
 
             <!-- Formulario -->
-            <div class="border p-6   w-full max-w-md">
+            <div class="border p-6  w-full max-w-md">
               <form onsubmit="return false;">
                 <div class="mb-4">
-                  <label class="block text-neutral-700">Nombre</label>
+                  <label class="block text-neutral-4">Nombre</label>
                   <input type="text" class="w-full border border-neutral-300 p-2 rounded disabled " />
                 </div>
                 <div class="mb-4">
-                  <label class="block text-neutral-700">Correo</label>
+                  <label class="block text-neutral-4">Correo</label>
                   <input type="email" class="w-full border border-neutral-300 p-2 rounded disabled " />
                 </div>
                 <div class="mb-4">
-                  <label class="block text-neutral-700">Mensaje</label>
+                  <label class="block text-neutral-4">Mensaje</label>
                   <textarea class="w-full border border-neutral-300 p-2 rounded disabled "></textarea>
                 </div>
-                <button type="submit" class="bg-rose-500 text-neutral-100 px-4 py-2 w-full disabled title=" Formulario
-                  no disponible aún" ">Enviar</button>
+                <button type="submit" class=" text-neutral-400 px-4 py-2 w-full disabled    border border-rose-600" title=" Formulario
+                  no disponible aún">Enviar</button>
               </form>
-              <p class=" text-rose-900 font-light text-xs mb-4">Formulario deshabilitado temporalmente.</p>
+              <p class=" text-rose-900 font-base  text-xl mb-4">Formulario deshabilitado temporalmente.</p>
             </div>
           </div>
     </section>
