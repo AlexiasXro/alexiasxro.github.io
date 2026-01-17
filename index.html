@@ -526,16 +526,152 @@
             </div>
             <div class="flex flex-col gap-2">
 
-              <a href="ruta-a-video-o-repo" target="_blank"
-                class="block px-4 py-2 bg-neutral-800 border border-rose-600 hover:bg-rose-900 text-white text-center rounded-xs font-normal transition">
-                Ver demo
-              </a>
+   <button
+  id="openGestorAbba"
+  class="block px-4 py-2 bg-neutral-800 border border-rose-600 hover:bg-rose-900 text-white text-center rounded font-normal transition">
+  Ver demo
+</button>
               <button data-toggle-overlay="gestor"
                 class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition mt-2">
                 Ver detalles técnicos
               </button>
             </div>
           </div>
+          <!-- Modal Gestor ABBA -->
+<!-- Modal Gestor ABBA -->
+<div id="gestorabba" class="fixed inset-0 z-50 hidden">
+  
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+
+  <!-- Contenedor -->
+  <div class="relative mx-auto mt-10 max-w-5xl bg-neutral-900 text-white rounded-lg border border-rose-600 shadow-xl">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between px-6 py-4 border-b border-neutral-700">
+      <h2 class="text-lg font-semibold">Gestor ABBA · Demo del sistema</h2>
+      <button id="closeGestorAbba" class="text-neutral-400 hover:text-white text-xl">&times;</button>
+    </div>
+
+    <!-- Body -->
+    <div class="p-6">
+
+      <!-- Carrusel -->
+      <div class="relative overflow-hidden rounded-lg">
+
+        <div id="gestorabbaSlides" class="flex transition-transform duration-500">
+
+          <!-- Dashboard -->
+<img src="img/Abba/demo1.png"
+     class="w-full flex-shrink-0 object-contain"
+     alt="Dashboard Gestor ABBA – Control total del negocio en tiempo real">
+
+<!-- Ventas / Caja -->
+<img src="img/Abba/demo2.png"
+     class="w-full flex-shrink-0 object-contain"
+     alt="Venta rápida Gestor ABBA – Pagos, cuotas y cálculo automático de vuelto">
+
+<!-- Lector de código de barras -->
+<img src="img/Abba/demo3.png"
+     class="w-full flex-shrink-0 object-contain"
+     alt="Ventas con código de barras Gestor ABBA – Búsqueda rápida de productos">
+
+<!-- Stock por talle -->
+<img src="img/Abba/demo4.png"
+     class="w-full flex-shrink-0 object-contain"
+     alt="Control de stock por talle Gestor ABBA – Actualización automática">
+
+<!-- Clientes -->
+<img src="img/Abba/demo5.png"
+     class="w-full flex-shrink-0 object-contain"
+     alt="Gestión de clientes Gestor ABBA – Historial de compras y fidelización">
+
+<!-- Reportes con IA -->
+<img src="img/Abba/demo6.png"
+     class="w-full flex-shrink-0 object-contain"
+     alt="Reportes inteligentes con IA Gestor ABBA – Análisis automático del negocio">
+
+<!-- Gastos y proveedores -->
+<img src="img/Abba/demo7.png"
+     class="w-full flex-shrink-0 object-contain"
+     alt="Gestión de gastos y proveedores Gestor ABBA – Control de egresos y compras">
+
+<!-- Importación desde Excel -->
+<img src="img/Abba/demo8.png"
+     class="w-full flex-shrink-0 object-contain"
+     alt="Importación de productos desde Excel Gestor ABBA – Carga masiva simplificada">
+
+<!-- Facturación -->
+<img src="img/Abba/demo9.png"
+     class="w-full flex-shrink-0 object-contain"
+     alt="Generación de facturas Gestor ABBA – Comprobantes claros y profesionales">
+
+<!-- Slide final / Branding -->
+<img src="img/Abba/demo10.png"
+     class="w-full flex-shrink-0 object-contain"
+     alt="Gestor ABBA – Sistema integral de ventas, stock y gestión comercial">
+
+        </div>
+
+        <!-- Controles -->
+        <button id="prevGestorAbba"
+          class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 px-3 py-2 rounded-full hover:bg-black">
+          ‹
+        </button>
+
+        <button id="nextGestorAbba"
+          class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 px-3 py-2 rounded-full hover:bg-black">
+          ›
+        </button>
+
+      </div>
+
+      <!-- Video futuro -->
+      <div class="mt-4 text-center text-neutral-400 text-sm">
+        🎥 Próximamente: video demo de Gestor ABBA
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const modal = document.getElementById('gestorabba');
+  const openBtn = document.getElementById('openGestorAbba');
+  const closeBtn = document.getElementById('closeGestorAbba');
+
+  const slides = document.getElementById('gestorabbaSlides');
+  const totalSlides = slides.children.length;
+  let index = 0;
+
+  openBtn.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    index = 0;
+    updateSlide();
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+  document.getElementById('nextGestorAbba').addEventListener('click', () => {
+    index = (index + 1) % totalSlides;
+    updateSlide();
+  });
+
+  document.getElementById('prevGestorAbba').addEventListener('click', () => {
+    index = (index - 1 + totalSlides) % totalSlides;
+    updateSlide();
+  });
+
+  function updateSlide() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+});
+</script>
+
 
           <!-- Proyecto 4 (factura lite) -->
           <div class="proyecto bg-neutral-900 p-4 rounded shadow relative">
