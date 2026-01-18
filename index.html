@@ -18,27 +18,55 @@
   <link href="./tailwind.css" rel="stylesheet" />
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<style>
-  .touch-pinch-zoom {
-    touch-action: pinch-zoom;
-  }
-</style>
+  <style>
+    .touch-pinch-zoom {
+      touch-action: pinch-zoom;
+    }
+  </style>
 
 </head>
 
 <body class=" bg-neutral-800 text-neutral-200 font-sans">
 
   <!-- Navbar -->
-  <nav class=" bg-neutral-800/80 shadow p-4 fixed top-0 w-full z-50">
-    <ul class="flex justify-center space-x-6 font-stretch-normal text-xl text-neutral-400">
-      <li><a href="#home" class="hover:text-rose-500">Inicio</a></li>
-      <li><a href="#sobre-mi" class="hover:text-rose-500">Sobre mí</a></li>
-      <li><a href="#proyectos" class="hover:text-rose-500">Proyectos</a></li>
-      <li><a href="#habilidades" class="hover:text-rose-500">Habilidades</a></li>
-      <li><a href="#emprendimiento" class="hover:text-rose-500">Emprendimiento</a></li>
-      <li><a href="#contacto" class="hover:text-rose-500">Contacto</a></li>
+  <nav class="bg-neutral-800/80 shadow p-4 fixed top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+      <!-- Logo / Nombre -->
+      <span class="text-white text-xl font-semibold">
+        Alexias
+      </span>
+
+      <!-- Botón hamburguesa (mobile) -->
+      <button id="menu-btn" class="md:hidden text-neutral-300 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Menú desktop -->
+      <ul class="hidden md:flex space-x-6 text-xl text-neutral-400">
+        <li><a href="#home" class="hover:text-rose-500">Inicio</a></li>
+        <li><a href="#sobre-mi" class="hover:text-rose-500">Sobre mí</a></li>
+        <li><a href="#proyectos" class="hover:text-rose-500">Proyectos</a></li>
+        <li><a href="#habilidades" class="hover:text-rose-500">Habilidades</a></li>
+        <li><a href="#emprendimiento" class="hover:text-rose-500">Emprendimiento</a></li>
+        <li><a href="#contacto" class="hover:text-rose-500">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Menú mobile -->
+    <ul id="menu-mobile"
+      class="md:hidden hidden flex-col mt-4 space-y-3 text-lg text-neutral-300 bg-neutral-900/90 p-4 rounded-lg">
+      <li><a href="#home" class="block hover:text-rose-500">Inicio</a></li>
+      <li><a href="#sobre-mi" class="block hover:text-rose-500">Sobre mí</a></li>
+      <li><a href="#proyectos" class="block hover:text-rose-500">Proyectos</a></li>
+      <li><a href="#habilidades" class="block hover:text-rose-500">Habilidades</a></li>
+      <li><a href="#emprendimiento" class="block hover:text-rose-500">Emprendimiento</a></li>
+      <li><a href="#contacto" class="block hover:text-rose-500">Contacto</a></li>
     </ul>
   </nav>
+
 
   <main class="flex flex-col ">
 
@@ -522,10 +550,12 @@
                 <ul class="list-disc pl-5 my-4 ">
 
                   <li>Aplicación <strong>fullstack</strong> desarrollada con <strong>Laravel 11</strong> y
-                    <strong>Blade</strong>.</li>
+                    <strong>Blade</strong>.
+                  </li>
                   <li>Frontend con <strong>Bootstrap</strong> para una interfaz responsiva y funcional.</li>
                   <li>Funcionalidades clave: gestión de <strong>compras</strong>, <strong>proveedores</strong>,
-                    <strong>clientes</strong>, <strong>ventas</strong> e <strong>inventarios</strong>.</li>
+                    <strong>clientes</strong>, <strong>ventas</strong> e <strong>inventarios</strong>.
+                  </li>
                   <li>Incluye <strong>reportes</strong>, análisis de egresos y cierres de caja.</li>
                   <li>Implementa <strong>autenticación</strong>, <strong>roles</strong> y <strong>soft delete</strong>
                     para manejo seguro de datos.</li>
@@ -549,105 +579,115 @@
             </div>
           </div>
           <!-- Modal Gestor ABBA -->
-           
+
           <!-- Modal Gestor ABBA -->
           <div id="gestorabba" class="fixed inset-0 z-50 hidden">
 
             <!-- Overlay -->
-            <div class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
 
             <!-- Contenedor -->
-            <div
-              class="relative mx-auto mt-10 max-w-5xl bg-neutral-900 text-white rounded-lg border border-rose-600 shadow-xl">
+            <div class="relative mx-auto mt-0 md:mt-10 max-w-5xl h-screen md:h-auto
+           bg-black md:bg-neutral-900 text-white
+           md:rounded-lg md:border md:border-rose-600 shadow-xl">
 
-              <!-- Header -->
-              <div class="flex items-center justify-between px-6 py-4 border-b border-neutral-700">
+              <!-- Header (solo desktop) -->
+              <div class="hidden md:flex items-center justify-between px-6 py-4 border-b border-neutral-700">
                 <h2 class="text-lg font-semibold">Gestor ABBA · Demo del sistema</h2>
                 <button id="closeGestorAbba" class="text-neutral-400 hover:text-white text-xl">&times;</button>
               </div>
 
+              <!-- Botón cerrar mobile -->
+              <button id="closeGestorAbbaMobile"
+                class="md:hidden absolute top-3 right-3 z-50 bg-black/70 text-white rounded-full w-10 h-10 text-xl flex items-center justify-center">
+                ✕
+              </button>
+
               <!-- Body -->
-              <div class="p-6">
+              <div class="p-0 md:p-6 h-full">
 
                 <!-- Carrusel -->
-                <div class="relative overflow-hidden rounded-lg">
+                <div class="relative overflow-hidden h-full md:h-auto">
 
-                  <div id="gestorabbaSlides" class="flex transition-transform duration-500">
+                  <div id="gestorabbaSlides" class="flex transition-transform duration-500 h-full">
 
-                    <!-- Dashboard -->
-                    <img src="img/Abba/demo1.png" class="max-h-full max-w-full object-contain touch-pinch-zoom"
-                      alt="Dashboard Gestor ABBA – Control total del negocio en tiempo real">
+                    <img src="img/Abba/demo1.png"
+     class="w-full h-full flex-shrink-0 object-contain"
+     alt="Dashboard Gestor ABBA – Control total del negocio en tiempo real">
 
-                    <!-- Ventas / Caja -->
-                    <img src="img/Abba/demo2.png" class="max-h-full max-w-full object-contain touch-pinch-zoom"
-                      alt="Venta rápida Gestor ABBA – Pagos, cuotas y cálculo automático de vuelto">
+<img src="img/Abba/demo2.png"
+     class="w-full h-full flex-shrink-0 object-contain"
+     alt="Venta rápida Gestor ABBA – Pagos, cuotas y cálculo automático de vuelto">
 
-                    <!-- Lector de código de barras -->
-                    <img src="img/Abba/demo3.png" class="max-h-full max-w-full object-contain touch-pinch-zoom"
-                      alt="Ventas con código de barras Gestor ABBA – Búsqueda rápida de productos">
+<img src="img/Abba/demo3.png"
+     class="w-full h-full flex-shrink-0 object-contain"
+     alt="Ventas con código de barras Gestor ABBA – Búsqueda rápida de productos">
 
-                    <!-- Stock por talle -->
-                    <img src="img/Abba/demo4.png" class="max-h-full max-w-full object-contain touch-pinch-zoom"
-                      alt="Control de stock por talle Gestor ABBA – Actualización automática">
+<img src="img/Abba/demo4.png"
+     class="w-full h-full flex-shrink-0 object-contain"
+     alt="Control de stock por talle Gestor ABBA – Actualización automática">
 
-                    <!-- Clientes -->
-                    <img src="img/Abba/demo5.png" class="max-h-full max-w-full object-contain touch-pinch-zoom"
-                      alt="Gestión de clientes Gestor ABBA – Historial de compras y fidelización">
+<img src="img/Abba/demo5.png"
+     class="w-full h-full flex-shrink-0 object-contain"
+     alt="Gestión de clientes Gestor ABBA – Historial de compras y fidelización">
 
-                    <!-- Reportes con IA -->
-                    <img src="img/Abba/demo6.png" class="max-h-full max-w-full object-contain touch-pinch-zoom"
-                      alt="Reportes inteligentes con IA Gestor ABBA – Análisis automático del negocio">
+<img src="img/Abba/demo6.png"
+     class="w-full h-full flex-shrink-0 object-contain"
+     alt="Reportes inteligentes con IA Gestor ABBA – Análisis automático del negocio">
 
-                    <!-- Gastos -->
-                    <img src="img/Abba/demo7.png" class="max-h-full max-w-full object-contain touch-pinch-zoom"
-                      alt="Gestión de gastos y proveedores Gestor ABBA – Control de egresos y compras">
+<img src="img/Abba/demo7.png"
+     class="w-full h-full flex-shrink-0 object-contain"
+     alt="Gestión de gastos y proveedores Gestor ABBA – Control de egresos y compras">
 
-                      <!-- Proveedores -->
-                    <img src="img/Abba/demo7-1.png" class="max-h-full max-w-full object-contain touch-pinch-zoom"
-                      alt="Gestión de gastos y proveedores Gestor ABBA – Control de egresos y compras">
+<img src="img/Abba/demo7-1.png"
+     class="w-full h-full flex-shrink-0 object-contain"
+     alt="Gestión de proveedores Gestor ABBA – Administración de compras y pagos">
 
+<img src="img/Abba/demo8.png"
+     class="w-full h-full flex-shrink-0 object-contain"
+     alt="Importación de productos desde Excel Gestor ABBA – Carga masiva simplificada">
 
-                    <!-- Importación desde Excel -->
-                    <img src="img/Abba/demo8.png" class="max-h-full max-w-full object-contain touch-pinch-zoom"
-                      alt="Importación de productos desde Excel Gestor ABBA – Carga masiva simplificada">
+<img src="img/Abba/demo9.png"
+     class="w-full h-full flex-shrink-0 object-contain"
+     alt="Generación de facturas Gestor ABBA – Comprobantes claros y profesionales">
 
-                    <!-- Facturación -->
-                    <img src="img/Abba/demo9.png" class="max-h-full max-w-full object-contain touch-pinch-zoom"
-                      alt="Generación de facturas Gestor ABBA – Comprobantes claros y profesionales">
+<img src="img/Abba/demo10.png"
+     class="w-full h-full flex-shrink-0 object-contain"
+     alt="Gestor ABBA en PC, tablet y celular – Sistema de ventas, stock y gestión comercial">
 
-                    <!-- Slide final / Branding -->
-                    <img src="img/Abba/demo10.png" class="max-h-full max-w-full object-contain touch-pinch-zoom"
-                      alt="Gestor ABBA en PC, tablet y celular – Sistema de ventas, stock y gestión comercial">
 
                   </div>
 
                   <!-- Controles -->
                   <button id="prevGestorAbba"
-                    class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 px-3 py-2 rounded-full hover:bg-black">
+                    class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 px-4 py-3 rounded-full text-xl">
                     ‹
                   </button>
 
                   <button id="nextGestorAbba"
-                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 px-3 py-2 rounded-full hover:bg-black">
+                    class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 px-4 py-3 rounded-full text-xl">
                     ›
                   </button>
 
                 </div>
 
-                <!-- Video futuro -->
-                <div class="mt-4 text-center text-neutral-400 text-sm">
+                <!-- Footer (solo desktop) -->
+                <div class="hidden md:block mt-4 text-center text-neutral-400 text-sm">
                   🎥 Próximamente: video demo de Gestor ABBA
                 </div>
 
               </div>
             </div>
           </div>
+
+
           <script>
             document.addEventListener('DOMContentLoaded', () => {
 
               const modal = document.getElementById('gestorabba');
               const openBtn = document.getElementById('openGestorAbba');
               const closeBtn = document.getElementById('closeGestorAbba');
+              const closeMobile = document.getElementById('closeGestorAbbaMobile');
 
               const slides = document.getElementById('gestorabbaSlides');
               const totalSlides = slides.children.length;
@@ -659,7 +699,11 @@
                 updateSlide();
               });
 
-              closeBtn.addEventListener('click', () => {
+              closeBtn?.addEventListener('click', () => {
+                modal.classList.add('hidden');
+              });
+
+              closeMobile.addEventListener('click', () => {
                 modal.classList.add('hidden');
               });
 
@@ -679,6 +723,10 @@
 
             });
           </script>
+
+
+
+
 
 
           <!-- Proyecto 4 (factura lite) -->

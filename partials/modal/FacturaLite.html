@@ -1,0 +1,104 @@
+<!-- Modal Factura Lite -->
+<div id="facturalite" class="fixed inset-0 z-50 hidden">
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+
+  <!-- Contenedor -->
+  <div
+    class="relative mx-auto mt-0 md:mt-10 max-w-5xl h-screen md:h-auto
+           bg-black md:bg-neutral-900 text-white
+           md:rounded-lg md:border md:border-sky-500 shadow-xl">
+
+    <!-- Header (solo desktop) -->
+    <div class="hidden md:flex items-center justify-between px-6 py-4 border-b border-neutral-700">
+      <h2 class="text-lg font-semibold">Factura Lite · Demo del sistema</h2>
+      <button id="closeFacturaLite" class="text-neutral-400 hover:text-white text-xl">&times;</button>
+    </div>
+
+    <!-- Botón cerrar mobile -->
+    <button id="closeFacturaLiteMobile"
+      class="md:hidden absolute top-3 right-3 z-50 bg-black/70 text-white rounded-full w-10 h-10 text-xl flex items-center justify-center">
+      ✕
+    </button>
+
+    <!-- Body -->
+    <div class="p-0 md:p-6 h-full">
+
+      <!-- Carrusel -->
+      <div class="relative overflow-hidden h-full md:h-auto">
+
+        <div id="facturaliteSlides" class="flex transition-transform duration-500 h-full">
+
+          <img src="img/FacturaLite/demo1.png" class="w-full h-full flex-shrink-0 object-contain">
+          <img src="img/FacturaLite/demo2.png" class="w-full h-full flex-shrink-0 object-contain">
+          <img src="img/FacturaLite/demo3.png" class="w-full h-full flex-shrink-0 object-contain">
+          <img src="img/FacturaLite/demo4.png" class="w-full h-full flex-shrink-0 object-contain">
+          <img src="img/FacturaLite/demo5.png" class="w-full h-full flex-shrink-0 object-contain">
+
+        </div>
+
+        <!-- Controles -->
+        <button id="prevFacturaLite"
+          class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 px-4 py-3 rounded-full text-xl">
+          ‹
+        </button>
+
+        <button id="nextFacturaLite"
+          class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 px-4 py-3 rounded-full text-xl">
+          ›
+        </button>
+
+      </div>
+
+      <!-- Footer (solo desktop) -->
+      <div class="hidden md:block mt-4 text-center text-neutral-400 text-sm">
+        🧾 Facturación simple, rápida y profesional
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const modal = document.getElementById('facturalite');
+  const openBtn = document.getElementById('openFacturaLite');
+  const closeBtn = document.getElementById('closeFacturaLite');
+  const closeMobile = document.getElementById('closeFacturaLiteMobile');
+
+  const slides = document.getElementById('facturaliteSlides');
+  const totalSlides = slides.children.length;
+  let index = 0;
+
+  openBtn.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    index = 0;
+    updateSlide();
+  });
+
+  closeBtn?.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+  closeMobile.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+  document.getElementById('nextFacturaLite').addEventListener('click', () => {
+    index = (index + 1) % totalSlides;
+    updateSlide();
+  });
+
+  document.getElementById('prevFacturaLite').addEventListener('click', () => {
+    index = (index - 1 + totalSlides) % totalSlides;
+    updateSlide();
+  });
+
+  function updateSlide() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+});
+</script>
