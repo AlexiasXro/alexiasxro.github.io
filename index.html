@@ -11,10 +11,10 @@
 
     gtag('config', 'G-7Z6G8LFJYQ');
   </script>
-
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Portafolio - A.Romina Caceres</title>
+  <title>R&N|sistemas</title>
   <link href="./tailwind.css" rel="stylesheet" />
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -33,9 +33,13 @@
     <div class="max-w-7xl mx-auto flex items-center justify-between">
 
       <!-- Logo / Nombre -->
-      <span class="text-white text-xl font-semibold">
-        Alexias
-      </span>
+      <a href="#home" class="flex items-center">
+  <img 
+    src="img/logoriin.png" 
+    alt="Logo Alexias"
+    class="h-10 w-auto"
+  >
+</a>
 
       <!-- Botón hamburguesa (mobile) -->
       <button id="menu-btn" class="md:hidden text-neutral-300 focus:outline-none">
@@ -50,8 +54,8 @@
         <li><a href="#sobre-mi" class="hover:text-rose-500">Sobre mí</a></li>
         <li><a href="#proyectos" class="hover:text-rose-500">Proyectos</a></li>
         <li><a href="#habilidades" class="hover:text-rose-500">Habilidades</a></li>
-        <li><a href="#emprendimiento" class="hover:text-rose-500">Emprendimiento</a></li>
         <li><a href="#contacto" class="hover:text-rose-500">Contacto</a></li>
+        <li><a href="#servicio" class="hover:text-rose-500">Servicios</a></li>
       </ul>
     </div>
 
@@ -62,12 +66,19 @@
       <li><a href="#sobre-mi" class="block hover:text-rose-500">Sobre mí</a></li>
       <li><a href="#proyectos" class="block hover:text-rose-500">Proyectos</a></li>
       <li><a href="#habilidades" class="block hover:text-rose-500">Habilidades</a></li>
-      <li><a href="#emprendimiento" class="block hover:text-rose-500">Emprendimiento</a></li>
       <li><a href="#contacto" class="block hover:text-rose-500">Contacto</a></li>
+      <li><a href="#servicio" class="block hover:text-rose-500">Servicios</a></li>
     </ul>
   </nav>
 
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const menuMobile = document.getElementById('menu-mobile');
 
+  menuBtn.addEventListener('click', () => {
+    menuMobile.classList.toggle('hidden'); // alterna mostrar/ocultar
+  });
+</script>
   <main class="flex flex-col ">
 
 
@@ -90,6 +101,7 @@
 
 
     </section>
+
 
 
     <!-- Sección 1: Valores personales -->
@@ -170,289 +182,247 @@
       </div>
     </section>
 
-    <!-- Sección 2: Skills técnicas -->
-    <section id="habilidades" class="bg-neutral-950 text-neutral-400 py-16">
+   <!-- Sección: Skills técnicas y analista de sistemas -->
+<section id="habilidades" class="bg-neutral-950 text-neutral-400 py-16">
 
-      <div class="max-w-6xl mx-auto px-4">
+  <div class="max-w-6xl mx-auto px-4">
 
-        <div class="flex flex-col md:flex-row items-center justify-between min-h-[500px]">
+    <div class="flex flex-col md:flex-row items-center justify-between min-h-[500px]">
 
-          <!-- Texto -->
-          <!-- Contenedor izquierdo: texto -->
-          <div class="md:w-1/2 w-full mb-10 md:mb-0 px-8">
-            <h1 class="text-4xl font-bold text-neutral-300 mb-4">Mis Tecnologías</h1>
-            <h2 class="text-2xl font-semibold text-rose-500 mb-2">Conocimiento técnico y herramientas</h2>
-            <p class="text-neutral-300 text-lg">
-              Manejo tecnologías de frontend, backend y diseño con enfoque en la eficiencia, organización y trabajo en
-              equipo.
-              Me gusta analizar, entender al cliente y desarrollar soluciones funcionales, siempre aprendiendo y
-              adaptándome.
-            </p>
-          </div>
+      <!-- Texto -->
+      <div class="md:w-1/2 w-full mb-10 md:mb-0 px-8">
+        <h1 class="text-4xl font-bold text-neutral-300 mb-4">Mis Habilidades</h1>
+        <h2 class="text-2xl font-semibold text-rose-500 mb-2">Conocimiento técnico y herramientas</h2>
+        <p class="text-neutral-300 text-lg">
+          Manejo tecnologías de frontend, backend, diseño y análisis de sistemas con enfoque en eficiencia, organización y trabajo en equipo.
+        </p>
+      </div>
 
-          <!-- Contenedor derecho: gráfico de barras -->
-          <div class="md:w-1/2 w-full px-8">
+      <!-- Gráfico de barras -->
+      <div class="md:w-1/2 w-full px-8">
 
-            <div id="skills-bars" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- DESKTOP: grid completo -->
+        <div class="hidden md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-              <!-- Backend -->
-
-
-              <!-- PHP -->
-              <div>
-                <p class="mb-1">PHP</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="75%"></div>
-                </div>
-              </div>
-
-              <!-- Laravel -->
-              <div>
-                <p class="mb-1">Laravel</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="80%"></div>
-                </div>
-              </div>
-
-              <!-- Python -->
-              <div>
-                <p class="mb-1">Python</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="65%"></div>
-                </div>
-              </div>
-
-              <!-- Django -->
-              <div>
-                <p class="mb-1">Django</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="70%"></div>
-                </div>
-              </div>
-
-              <!-- MySQL -->
-              <div>
-                <p class="mb-1">MySQL</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="80%"></div>
-                </div>
-              </div>
-
-              <!-- SQLite / MariaDB -->
-              <div>
-                <p class="mb-1">MariaDB / SQLite</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="70%"></div>
-                </div>
-              </div>
-
-
-              <!-- Frontend -->
-              <!-- HTML5 -->
-              <div>
-                <p class="mb-1">HTML5</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="90%"></div>
-                </div>
-              </div>
-
-              <!-- CSS3 -->
-              <div>
-                <p class="mb-1">CSS3</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
-                </div>
-              </div>
-
-              <!-- JavaScript -->
-              <div>
-                <p class="mb-1">JavaScript</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="80%"></div>
-                </div>
-              </div>
-
-              <!-- Tailwind CSS -->
-              <div>
-                <p class="mb-1">Tailwind CSS</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
-                </div>
-              </div>
-
-              <!-- Bootstrap -->
-              <div>
-                <p class="mb-1">Bootstrap</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="80%"></div>
-                </div>
-              </div>
-
-              <!-- HTMX -->
-              <div>
-                <p class="mb-1">HTMX</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="70%"></div>
-                </div>
-              </div>
-              <!-- React -->
-              <div>
-                <p class="mb-1">React</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="75%"></div>
-                </div>
-              </div>
-              <!-- Scrum / Kanban -->
-              <div>
-                <p class="mb-1">Scrum / Kanban</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="80%"></div>
-                </div>
-              </div>
-
-              <!-- Git / GitHub -->
-              <div>
-                <p class="mb-1">Git / GitHub</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
-                </div>
-              </div>
-
-
-
-              <!--Diseño-->
-              <!-- Figma -->
-              <div>
-                <p class="mb-1">Figma</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
-                </div>
-              </div>
-
-              <!-- Adobe Illustrator -->
-              <div>
-                <p class="mb-1">Adobe Illustrator</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="70%"></div>
-                </div>
-              </div>
-
-              <!-- Photoshop -->
-              <div>
-                <p class="mb-1">Adobe Photoshop</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="65%"></div>
-                </div>
-              </div>
+          <!-- Frontend -->
+          <div>
+            <p class="mb-1">HTML5</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="90%"></div>
             </div>
-
-
           </div>
+          <div>
+            <p class="mb-1">CSS3</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1">JavaScript</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="80%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1">Tailwind CSS</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1">Bootstrap</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="80%"></div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div>
+            <p class="mb-1">PHP</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="75%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1">Laravel</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="80%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1">Python</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="65%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1">Django</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="70%"></div>
+            </div>
+          </div>
+
+          <!-- Analista / Bases de datos -->
+          <div>
+            <p class="mb-1">SQL</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="90%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1">Pandas</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1">Power BI</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="80%"></div>
+            </div>
+          </div>
+          <div>
+            <p class="mb-1">Excel Avanzado</p>
+            <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+              <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
+            </div>
+          </div>
+
         </div>
 
+        <!-- MOBILE: acordeón -->
+        <div class="md:hidden">
+
+          <!-- Frontend -->
+          <button class="accordion-btn w-full text-left p-2 bg-neutral-800 text-neutral-200 mb-2 rounded">Frontend</button>
+          <div class="accordion-content hidden space-y-3 mb-4">
+            <div>
+              <p class="mb-1">HTML5</p>
+              <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+                <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="90%"></div>
+              </div>
+            </div>
+            <div>
+              <p class="mb-1">CSS3</p>
+              <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+                <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
+              </div>
+            </div>
+            <div>
+              <p class="mb-1">JavaScript</p>
+              <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+                <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="80%"></div>
+              </div>
+            </div>
+            <div>
+              <p class="mb-1">Tailwind CSS</p>
+              <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+                <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
+              </div>
+            </div>
+            <div>
+              <p class="mb-1">Bootstrap</p>
+              <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+                <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="80%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <button class="accordion-btn w-full text-left p-2 bg-neutral-800 text-neutral-200 mb-2 rounded">Backend</button>
+          <div class="accordion-content hidden space-y-3 mb-4">
+            <div>
+              <p class="mb-1">PHP</p>
+              <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+                <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="75%"></div>
+              </div>
+            </div>
+            <div>
+              <p class="mb-1">Laravel</p>
+              <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+                <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="80%"></div>
+              </div>
+            </div>
+            <div>
+              <p class="mb-1">Python</p>
+              <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+                <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="65%"></div>
+              </div>
+            </div>
+            <div>
+              <p class="mb-1">Django</p>
+              <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+                <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="70%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Analista / Bases de datos -->
+          <button class="accordion-btn w-full text-left p-2 bg-neutral-800 text-neutral-200 mb-2 rounded">Analista / DB</button>
+          <div class="accordion-content hidden space-y-3 mb-4">
+            <div>
+              <p class="mb-1">SQL</p>
+              <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+                <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="90%"></div>
+              </div>
+            </div>
+            <div>
+              <p class="mb-1">Pandas</p>
+              <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+                <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
+              </div>
+            </div>
+            <div>
+              <p class="mb-1">Power BI</p>
+              <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+                <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="80%"></div>
+              </div>
+            </div>
+            <div>
+              <p class="mb-1">Excel Avanzado</p>
+              <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
+                <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </section>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const bars = document.querySelectorAll(".bar-fill");
+    </div>
+  </div>
+</section>
 
-        const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const bar = entry.target;
-              const width = bar.dataset.width;
-              bar.style.transition = "width 1.5s ease-out";
-              bar.style.width = width;
-              observer.unobserve(bar); // Solo una vez
-            }
-          });
-        }, {
-          threshold: 0.4 // cuando el 40% sea visible
-        });
-
-        bars.forEach(bar => {
-          bar.style.width = "0"; // Reset inicial
-          observer.observe(bar);
-        });
+<!-- JS: Animación y acordeón -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Animación barras
+    const bars = document.querySelectorAll(".bar-fill");
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          const width = bar.dataset.width;
+          bar.style.transition = "width 1.5s ease-out";
+          bar.style.width = width;
+          observer.unobserve(bar);
+        }
       });
-    </script>
+    }, { threshold: 0.4 });
+    bars.forEach(bar => {
+      bar.style.width = "0";
+      observer.observe(bar);
+    });
 
-    <!-- Sección: Skills Analista de Sistemas -->
-    <section id="habilidades" class="bg-neutral-850 text-neutral-400 py-16">
-
-      <div class="max-w-6xl mx-auto px-4">
-
-        <div class="flex flex-col md:flex-row items-center justify-between min-h-[500px]">
-
-          <!-- Texto -->
-          <div class="md:w-1/2 w-full mb-10 md:mb-0 px-8">
-            <h1 class="text-4xl font-bold text-neutral-300 mb-4">Competencias en Sistemas</h1>
-            <h2 class="text-2xl font-semibold text-rose-500 mb-2">Analista de Datos y Sistemas</h2>
-            <p class="text-neutral-300 text-lg">
-              Experiencia en análisis de datos, gestión de bases de datos y visualización de información para la toma de
-              decisiones.
-              Manejo herramientas de programación, modelado y reporting con enfoque en eficiencia y claridad.
-            </p>
-          </div>
-
-          <!-- Gráfico de barras -->
-          <div class="md:w-1/2 w-full px-8">
-
-            <div id="skills-bars" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-              <!-- SQL -->
-              <div>
-                <p class="mb-1">SQL</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="90%"></div>
-                </div>
-              </div>
-
-              <!-- Pandas -->
-              <div>
-                <p class="mb-1">Pandas</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
-                </div>
-              </div>
-
-              <!-- Power BI -->
-              <div>
-                <p class="mb-1">Power BI</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="80%"></div>
-                </div>
-              </div>
-
-              <!-- Excel Avanzado -->
-              <div>
-                <p class="mb-1">Excel Avanzado</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="85%"></div>
-                </div>
-              </div>
-
-              <!-- Python -->
-              <div>
-                <p class="mb-1">Python</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="75%"></div>
-                </div>
-              </div>
-
-              <!-- Documentación / UML -->
-              <div>
-                <p class="mb-1">Documentación / UML</p>
-                <div class="w-full bg-neutral-700 rounded-full h-1 overflow-hidden">
-                  <div class="bg-rose-500 h-1 rounded-full bar-fill" data-width="70%"></div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    // Acordeón móvil
+    const accBtns = document.querySelectorAll(".accordion-btn");
+    accBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        content.classList.toggle("hidden");
+      });
+    });
+  });
+</script>
 
 
 
@@ -1103,6 +1073,105 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
     </section>
+
+
+    <!-- Sección: Servicios -->
+<!-- Sección: Servicios -->
+<!-- Sección: Servicios -->
+<section id="servicio" class="bg-neutral-950 text-neutral-400 py-28">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-24">
+
+      <!-- Columna izquierda -->
+      <div class="md:w-1/2 w-full space-y-12">
+
+        <!-- Títulos -->
+        <div class="space-y-4">
+          <h1 class="text-5xl font-bold text-neutral-300 leading-tight">
+            Servicios
+          </h1>
+          <h2 class="text-2xl font-semibold text-rose-500">
+            Sistemas para gestión y ventas
+          </h2>
+        </div>
+
+        <!-- Texto -->
+        <p class="text-neutral-300 text-lg leading-relaxed max-w-xl">
+          Desarrollo sistemas de gestión orientados a pequeños y medianos emprendimientos,
+          enfocados en ventas, control de stock y organización del negocio.
+          Soluciones simples, claras y adaptadas a cada cliente.
+        </p>
+
+        <!-- Redes -->
+        <div class="space-y-8 pt-6">
+
+          <a href="https://www.instagram.com/riin.info/" target="_blank" rel="noopener noreferrer"
+            class="flex items-center gap-6 hover:text-rose-400 transition-transform hover:scale-105">
+            <div class="border border-neutral-600 rounded-full p-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-7 h-7 text-rose-500">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M7.5 3.75h9A3.75 3.75 0 0 1 20.25 7.5v9a3.75 3.75 0 0 1-3.75 3.75h-9A3.75 3.75 0 0 1 3.75 16.5v-9A3.75 3.75 0 0 1 7.5 3.75z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17.25 6.75h.008v.008h-.008z" />
+              </svg>
+            </div>
+            <span class="text-neutral-100 text-base">Instagram R&N</span>
+          </a>
+
+          <a href="https://www.facebook.com/profile.php?id=61582445667474" target="_blank" rel="noopener noreferrer"
+            class="flex items-center gap-6 hover:text-rose-400 transition-transform hover:scale-105">
+            <div class="border border-neutral-600 rounded-full p-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-7 h-7 text-rose-500">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17.25 6.75h-2.25A3 3 0 0 0 12 9.75v2.25H9.75v3H12v6h3v-6h2.25l.75-3H15V9.75c0-.414.336-.75.75-.75h1.5v-3z" />
+              </svg>
+            </div>
+            <span class="text-neutral-100 text-base">Facebook R&N</span>
+          </a>
+
+        </div>
+      </div>
+
+     <div class="md:w-1/2 w-full flex justify-center">
+
+  <div class="relative w-full max-w-md">
+
+    <!-- Líneas decorativas -->
+    <span class="absolute -top-6 -left-6 w-16 h-[2px] bg-rose-500"></span>
+    <span class="absolute -top-6 -left-6 w-[2px] h-16 bg-rose-500"></span>
+
+    <span class="absolute -bottom-6 -right-6 w-16 h-[2px] bg-rose-500"></span>
+    <span class="absolute -bottom-6 -right-6 w-[2px] h-16 bg-rose-500"></span>
+
+    <!-- Marco exterior -->
+    <div class="border border-rose-500/40 p-2">
+
+      <!-- Marco interior -->
+      <div class="">
+
+        <img 
+          src="img/Abba/abba muestra.jpeg"
+          alt="Sistema de gestión"
+          class="w-full h-auto object-cover brightness-110 contrast-110"
+        >
+
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+    </div>
+  </div>
+</section>
+
   </main>
 
 
