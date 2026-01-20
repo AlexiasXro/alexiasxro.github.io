@@ -465,86 +465,16 @@
         </h2>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <!-- Proyecto 1 -->
+        
+
+
+          <!-- Proyecto 1 (sin hosting, fullstack local) -->
           <div class="proyecto bg-neutral-900 p-4 rounded shadow relative">
-            <!-- Contenedor de imagen con overlay -->
-            <div class="relative">
-              <img src="./img/frontAbba.png" alt="Proyecto Tienda Shoes"
-                class="rounded object-contain w-full h-56 mb-4" />
-
-              <!-- Overlay oculto inicialmente -->
-              <div id="overlay-front-abba"
-                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center overflow-y-auto">
-                <ul class="list-disc pl-5">
-
-                  <li>Desarrollado con <strong>HTML5, CSS3, Bootstrap</strong> y <strong>JavaScript puro</strong>.</li>
-                  <li>Frontend estático, ideal para <em>hosting gratuito</em>.</li>
-                  <li>Versión extendida con integración a <strong>Base de Datos MySQL</strong>.</li>
-                  <li>Diseño <strong>100% responsive</strong>, adaptado a móviles y tablets.</li>
-                  <li>Incluye formulario de inicio de sesión para acceso al panel de administración.</li>
-                  <li>Reto principal: mantener la aplicación estática para máxima eficiencia y simplicidad.</li>
-                </ul>
-
-              </div>
-
-
-              <!-- Botones -->
-              <div class="flex flex-col gap-2">
-                <a href="https://tiendashoes-abba.netlify.app/" target="_blank"
-                  class="block px-4 py-2 bg-neutral-800 border border-rose-600 hover:bg-rose-900 text-white text-center rounded-xs font-normal transition">
-                  Ver página
-                </a>
-                <button data-toggle-overlay="front-abba"
-                  class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition">
-                  Ver detalles técnicos
-                </button>
-
-              </div>
-            </div>
-          </div>
-
-
-          <!-- Proyecto 2 -->
-          <!-- Proyecto 2 -->
-          <div class="proyecto bg-neutral-900 p-4 rounded shadow relative">
-            <div class="relative">
-              <img src="./img/EventoAnime.png" alt="Proyecto Fan Eventos"
-                class="rounded object-contain w-full h-56 mb-4" />
-              <div id="overlay-fan-eventos"
-                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center overflow-y-auto">
-
-                <ul class="list-disc pl-5 text-neutral-300 ">
-                  <li>Desarrollado con <strong>HTML</strong>, <strong>Tailwind CSS</strong> y <strong>JavaScript
-                      puro</strong>.</li>
-                  <li>Interfaz con botones para inscripción y acceso a información.</li>
-                  <li>Integración con <strong>Google Formularios</strong> y <strong>Google Documentos</strong> para
-                    gestión de inscripciones.</li>
-                  <li>Temporizador que controla el cierre automático de inscripciones y oculta el formulario.</li>
-                  <li>Incluye mapa del lugar con <strong>Google Maps</strong> y seguimiento mediante <strong>Google
-                      Analytics</strong>.</li>
-                  <li>Sitio estático sin backend ni base de datos.</li>
-                </ul>
-
-
-              </div>
-            </div>
-            <div class="flex flex-col gap-2">
-              <a href="https://faneventos.netlify.app/" target="_blank"
-                class="block px-4 py-2 bg-neutral-800 border border-rose-600 hover:bg-rose-900 text-white text-center rounded-xs font-normal transition">
-                Ver página
-              </a>
-              <button data-toggle-overlay="fan-eventos"
-                class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition">
-                Ver detalles técnicos
-              </button>
-            </div>
-          </div>
-
-
-          <!-- Proyecto 3 (sin hosting, fullstack local) -->
-          <div class="proyecto bg-neutral-900 p-4 rounded shadow relative">
-            <div class="relative">
-              <img src="./img/gestor.png" alt="Proyecto Gestor" class="rounded object-contain w-full h-56 mb-4" />
+              <div class="relative w-full h-96 rounded overflow-hidden mb-4">
+             <img src="./img/gestor.png" alt="Proyecto Gestor Abba"
+                class="w-full h-full object-cover object-top" />
+                
+            
               <div id="overlay-gestor"
                 class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded  flex flex-col justify-center overflow-y-auto">
                 <ul class="list-disc pl-5 my-4 ">
@@ -679,8 +609,6 @@
               </div>
             </div>
           </div>
-
-
           <script>
             document.addEventListener('DOMContentLoaded', () => {
 
@@ -724,12 +652,7 @@
             });
           </script>
 
-
-
-
-
-
-          <!-- Proyecto 4 (factura lite) -->
+          <!-- Proyecto 4 (factura lite) 
           <div class="proyecto bg-neutral-900 p-4 rounded shadow relative">
             <div class="relative">
               <img src="https://via.placeholder.com/300x200/ff7f7f/333" alt="Proyecto Placeholder"
@@ -758,8 +681,8 @@
               </button>
             </div>
           </div>
-
-        </div>
+-->
+        
         <script>
           // Escucha todos los clicks en botones con data-toggle-overlay
           document.addEventListener('DOMContentLoaded', () => {
@@ -772,6 +695,286 @@
             });
           });
         </script>
+
+
+          <!-- Proyecto 2 -->
+          <div class="proyecto bg-neutral-900 p-4 rounded shadow relative">
+  <!-- Contenedor de imagen con overlay -->
+  <div class="relative w-full h-96 rounded overflow-hidden mb-4">
+    <img src="./img/frontAbba.png" alt="Proyecto Tienda Shoes ecomerce"
+         class="w-full h-full object-cover" />
+
+    <!-- Overlay oculto inicialmente -->
+    <div id="overlay-front-abba"
+         class="absolute inset-0 bg-rose-950/90 w-full h-full text-neutral-300 text-md p-4 hidden flex flex-col justify-center overflow-y-auto rounded">
+      <ul class="list-disc pl-5">
+        <li>Desarrollado con <strong>HTML5, CSS3, Bootstrap</strong> y <strong>JavaScript puro</strong>.</li>
+        <li>Frontend estático, ideal para <em>hosting gratuito</em>.</li>
+        <li>Versión extendida con integración a <strong>Base de Datos MySQL</strong>.</li>
+        <li>Diseño <strong>100% responsive</strong>, adaptado a móviles y tablets.</li>
+        <li>Incluye formulario de inicio de sesión para acceso al panel de administración.</li>
+        <li>Reto principal: mantener la aplicación estática para máxima eficiencia y simplicidad.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Botones separados del contenedor de la imagen -->
+  <div class="flex flex-col gap-2">
+    <a href="https://tiendashoes-abba.netlify.app/" target="_blank"
+       class="flex items-center justify-center gap-2 px-4 py-2 bg-neutral-800 border border-rose-600 hover:bg-rose-900 text-white text-center rounded-xs font-normal transition">
+      <span class="relative w-4 h-4">
+        <span class="absolute inline-flex w-full h-full rounded-full bg-red-500 opacity-75 animate-ping"></span>
+        <span class="relative inline-flex w-4 h-4 rounded-full bg-red-600"></span>
+      </span>
+      LIVE - Ver página
+    </a>
+    <button data-toggle-overlay="front-abba"
+            class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition">
+      Ver detalles técnicos
+    </button>
+  </div>
+</div>
+
+<!-- Proyecto 1: Changuitas (sin hosting, fullstack local) -->
+<div class="proyecto bg-neutral-900 p-4 rounded shadow relative">
+  
+                <div class="relative w-full h-96 rounded overflow-hidden mb-4">
+             <img src="./img/changuita.png" alt="Proyecto Changuitas"
+                class="w-full h-full object-cover object-top" />
+                
+  
+    <div id="overlay-changuitas"
+      class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded flex flex-col justify-center overflow-y-auto">
+      <ul class="list-disc pl-5 my-4">
+        <li>Plataforma <strong>fullstack</strong> desarrollada con <strong>Laravel 11</strong> y <strong>Blade</strong>.</li>
+        <li>Frontend con <strong>Tailwind CSS</strong> y <strong>Bootstrap</strong> para interfaz responsiva y moderna.</li>
+        <li>Funcionalidades clave: gestión de <strong>usuarios</strong>, <strong>perfiles</strong>, <strong>publicaciones de trabajo</strong> y <strong>cargas de CV</strong>.</li>
+        <li>Panel de administración para <strong>gestión de usuarios, publicaciones y reportes</strong>.</li>
+        <li>Integración con <strong>Mercado Pago</strong> para <strong>donaciones</strong> y <strong>suscripciones</strong> a servicios premium.</li>
+        <li>Filtros avanzados de búsqueda por <strong>categoría</strong>, <strong>ubicación</strong> y <strong>tipo de changuita</strong>.</li>
+        <li>Chat interno para interacción entre usuarios de la bolsa de trabajo.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="flex flex-col gap-2">
+    <button id="openChanguitas"
+      class="block px-4 py-2 bg-neutral-800 border border-rose-600 hover:bg-rose-900 text-white text-center rounded font-normal transition">
+      Ver demo
+    </button>
+    <button data-toggle-overlay="changuitas"
+      class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition mt-2">
+      Ver detalles técnicos
+    </button>
+  </div>
+</div>
+
+<!-- Modal Changuitas -->
+<div id="changuitasModal" class="fixed inset-0 z-50 hidden">
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+
+  <!-- Contenedor -->
+  <div class="relative mx-auto mt-0 md:mt-10 max-w-5xl h-screen md:h-auto
+       bg-black md:bg-neutral-900 text-white
+       md:rounded-lg md:border md:border-rose-600 shadow-xl">
+
+    <!-- Header (solo desktop) -->
+    <div class="hidden md:flex items-center justify-between px-6 py-4 border-b border-neutral-700">
+      <h2 class="text-lg font-semibold">Changuitas · Demo del sistema</h2>
+      <button id="closeChanguitas" class="text-neutral-400 hover:text-white text-xl">&times;</button>
+    </div>
+
+    <!-- Botón cerrar mobile -->
+    <button id="closeChanguitasMobile"
+      class="md:hidden absolute top-3 right-3 z-50 bg-black/70 text-white rounded-full w-10 h-10 text-xl flex items-center justify-center">
+      ✕
+    </button>
+
+    <!-- Body -->
+    <div class="p-0 md:p-6 h-full">
+
+      <!-- Carrusel -->
+      <div class="relative overflow-hidden h-full md:h-auto">
+        <div id="changuitasSlides" class="flex transition-transform duration-500 h-full">
+
+          <img src="img/changuitas/demo1.png"
+               class="w-full h-full flex-shrink-0 object-contain"
+               alt="Panel de administración Changuitas – Control de usuarios y publicaciones">
+
+          <img src="img/changuitas/demo2.png"
+               class="w-full h-full flex-shrink-0 object-contain"
+               alt="Publicaciones de trabajo Changuitas – Listado y filtros de búsqueda avanzados">
+
+          <img src="img/changuitas/demo3.png"
+               class="w-full h-full flex-shrink-0 object-contain"
+               alt="Cargas de CV Changuitas – Subida y edición de información profesional">
+
+          <img src="img/changuitas/demo4.png"
+               class="w-full h-full flex-shrink-0 object-contain"
+               alt="Chat interno Changuitas – Comunicación entre usuarios y empleadores">
+
+          <img src="img/changuitas/demo5.png"
+               class="w-full h-full flex-shrink-0 object-contain"
+               alt="Suscripciones y donaciones Changuitas – Integración con Mercado Pago">
+
+          <img src="img/changuitas/demo6.png"
+               class="w-full h-full flex-shrink-0 object-contain"
+               alt="Visualización de perfil Changuitas – Personalización y gestión de datos">
+
+        </div>
+
+        <!-- Controles -->
+        <button id="prevChanguitas"
+          class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 px-4 py-3 rounded-full text-xl">
+          ‹
+        </button>
+
+        <button id="nextChanguitas"
+          class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 px-4 py-3 rounded-full text-xl">
+          ›
+        </button>
+
+      </div>
+
+      <!-- Footer (solo desktop) -->
+      <div class="hidden md:block mt-4 text-center text-neutral-400 text-sm">
+        🎥 Próximamente: video demo de Changuitas
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const modal = document.getElementById('changuitasModal');
+  const openBtn = document.getElementById('openChanguitas');
+  const closeBtn = document.getElementById('closeChanguitas');
+  const closeMobile = document.getElementById('closeChanguitasMobile');
+
+  const slides = document.getElementById('changuitasSlides');
+  const totalSlides = slides.children.length;
+  let index = 0;
+
+  openBtn.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    index = 0;
+    updateSlide();
+  });
+
+  closeBtn?.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+  closeMobile.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+  document.getElementById('nextChanguitas').addEventListener('click', () => {
+    index = (index + 1) % totalSlides;
+    updateSlide();
+  });
+
+  document.getElementById('prevChanguitas').addEventListener('click', () => {
+    index = (index - 1 + totalSlides) % totalSlides;
+    updateSlide();
+  });
+
+  function updateSlide() {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+});
+</script>
+ <!-- Proyecto 5 -->
+          <div class="proyecto bg-neutral-900 p-4 rounded shadow relative">
+           <div class="relative w-full h-96 rounded overflow-hidden mb-4">
+              <img src="./img/SonarHoy.png" alt="Blog de musica"
+                class="w-full h-full object-cover object-top" />
+              <div id="overlay-fan-eventos"
+                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center overflow-y-auto">
+
+                <ul class="list-disc pl-5 text-neutral-300">
+  <li>Desarrollado con <strong>Python Django</strong>, <strong>Tailwind CSS</strong> y <strong>JavaScript</strong>.</li>
+  <li>Gestión de publicaciones y administración completa del contenido dentro del blog.</li>
+  <li>Control y reporte de comentarios de los usuarios, con conteo de “Me gusta” por publicación.</li>
+  <li>Manejo de <strong>3 tipos de roles</strong>: administradores, editores y visitantes.</li>
+  <li>Integración con <strong>API de Spotify</strong> para mostrar música y playlists directamente en las publicaciones.</li>
+  <li>Base de datos <strong>MySQL</strong> y hosting en <strong>PythonAnywhere</strong>.</li>
+</ul>
+
+
+
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+            <a href="https://deidad2028.pythonanywhere.com/" target="_blank"
+   class="flex items-center justify-center gap-2 px-4 py-2 bg-neutral-800 border border-rose-600 hover:bg-rose-900 text-white text-center rounded-xs font-normal transition">
+
+   <!-- Punto rojo animado más visible -->
+   <span class="relative w-4 h-4">
+     <span class="absolute inline-flex w-full h-full rounded-full bg-red-500 opacity-75 animate-ping"></span>
+     <span class="relative inline-flex w-4 h-4 rounded-full bg-red-600"></span>
+   </span>
+
+   LIVE - Ver página
+</a>
+              <button data-toggle-overlay="fan-eventos"
+                class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition">
+                Ver detalles técnicos
+              </button>
+            </div>
+          </div>
+          
+          <!-- Proyecto 4 -->
+          <div class="proyecto bg-neutral-900 p-4 rounded shadow relative">
+
+                <div class="relative w-full h-96 rounded overflow-hidden mb-4">
+              <img src="./img/EventoAnime.png" alt="Proyecto Fan Eventos"
+                class="w-full h-full object-cover object-top" />
+
+              <div id="overlay-fan-eventos"
+                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center overflow-y-auto">
+
+                <ul class="list-disc pl-5 text-neutral-300 ">
+                  <li>Desarrollado con <strong>HTML</strong>, <strong>Tailwind CSS</strong> y <strong>JavaScript
+                      puro</strong>.</li>
+                  <li>Interfaz con botones para inscripción y acceso a información.</li>
+                  <li>Integración con <strong>Google Formularios</strong> y <strong>Google Documentos</strong> para
+                    gestión de inscripciones.</li>
+                  <li>Temporizador que controla el cierre automático de inscripciones y oculta el formulario.</li>
+                  <li>Incluye mapa del lugar con <strong>Google Maps</strong> y seguimiento mediante <strong>Google
+                      Analytics</strong>.</li>
+                  <li>Sitio estático sin backend ni base de datos.</li>
+                </ul>
+
+
+              </div>
+            </div>
+            <div class="flex flex-col gap-2">
+              <a href="https://faneventos.netlify.app/" target="_blank"
+   class="flex items-center justify-center gap-2 px-4 py-2 bg-neutral-800 border border-rose-600 hover:bg-rose-900 text-white text-center rounded-xs font-normal transition">
+
+   <!-- Punto rojo animado más visible -->
+   <span class="relative w-4 h-4">
+     <span class="absolute inline-flex w-full h-full rounded-full bg-red-500 opacity-75 animate-ping"></span>
+     <span class="relative inline-flex w-4 h-4 rounded-full bg-red-600"></span>
+   </span>
+
+   LIVE - Ver página
+</a>
+              <button data-toggle-overlay="fan-eventos"
+                class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition">
+                Ver detalles técnicos
+              </button>
+            </div>
+          </div>
+         
+
+          
+          </div>
     </section>
 
     <!-- R&N -->
