@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Z6G8LFJYQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-7Z6G8LFJYQ');
+  </script>
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alejandra Romina Cáceres | Contenido & Redes</title>
+  <link href="./tailwind.css" rel="stylesheet" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --grad-pink: #ec4899;
+      --grad-purple: #a855f7;
+      --grad-orange: #fb923c;
+      --grad-cyan: #22d3ee;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--grad-pink), var(--grad-purple), var(--grad-cyan));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .badge-creative {
+      display: inline-block;
+      padding: 4px 16px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      background: linear-gradient(90deg, rgba(236, 72, 153, .15), rgba(168, 85, 247, .15));
+      border: 1px solid rgba(236, 72, 153, .4);
+      color: #f0abfc;
+    }
+
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: .35;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .section-title {
+      color: #f472b6;
+    }
+
+    .title-underline {
+      display: block;
+      width: 64px;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--grad-pink), var(--grad-purple), var(--grad-cyan));
+    }
+
+    .title-underline.centered {
+      margin: 12px auto 0;
+    }
+
+    .title-underline.left {
+      margin: 12px 0 0;
+    }
+
+    .icon-ring {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .icon-ring svg {
+      width: 24px;
+      height: 24px;
+      color: #fff;
+    }
+
+    .icon-video {
+      background: linear-gradient(135deg, var(--grad-pink), var(--grad-purple));
+    }
+
+    .icon-design {
+      background: linear-gradient(135deg, var(--grad-orange), var(--grad-pink));
+    }
+
+    .icon-social {
+      background: linear-gradient(135deg, var(--grad-cyan), var(--grad-purple));
+    }
+
+    .card-creative {
+      background: #18181b;
+      border-radius: 16px;
+      padding: 24px;
+      border-top: 3px solid transparent;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .card-creative:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .4);
+    }
+
+    .card-video {
+      border-top-color: var(--grad-pink);
+    }
+
+    .card-design {
+      border-top-color: var(--grad-orange);
+    }
+
+    .card-social {
+      border-top-color: var(--grad-cyan);
+    }
+
+    .work-placeholder {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .work-placeholder::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .15;
+    }
+
+    .work-video::before {
+      background: linear-gradient(135deg, var(--grad-pink), var(--grad-purple));
+    }
+
+    .work-design::before {
+      background: linear-gradient(135deg, var(--grad-orange), var(--grad-pink));
+    }
+
+    .tag-pill {
+      position: relative;
+      display: inline-block;
+      padding: 3px 12px;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      margin-bottom: 10px;
+    }
+
+    .tag-video {
+      background: rgba(236, 72, 153, .18);
+      color: #f9a8d4;
+    }
+
+    .tag-design {
+      background: rgba(251, 146, 60, .18);
+      color: #fdba74;
+    }
+
+    .photo-ring {
+      padding: 4px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, var(--grad-pink), var(--grad-purple), var(--grad-cyan));
+      flex-shrink: 0;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body class="bg-neutral-800 text-neutral-200 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-neutral-800/80 shadow p-4 fixed top-0 w-full z-50"
+    style="border-top: 4px solid; border-image: linear-gradient(90deg, #ec4899, #a855f7, #22d3ee) 1;">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+      <!-- Logo / Nombre -->
+      <a href="./index.html" class="flex items-center">
+        <img src="img/logoriin.png" alt="Logo Alexias" class="h-10 w-auto">
+      </a>
+
+      <!-- Botón hamburguesa (mobile) -->
+      <button id="menu-btn" class="md:hidden text-neutral-300 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Menú desktop -->
+      <ul class="hidden md:flex space-x-6 text-xl text-neutral-400">
+        <li><a href="./index.html" class="hover:text-rose-500">Desarrollo</a></li>
+        <li><a href="#sobre-contenido" class="hover:text-rose-500">Sobre este perfil</a></li>
+        <li><a href="#servicios-contenido" class="hover:text-rose-500">Servicios</a></li>
+        <li><a href="#herramientas-contenido" class="hover:text-rose-500">Herramientas</a></li>
+        <li><a href="#portfolio-contenido" class="hover:text-rose-500">Trabajos</a></li>
+        <li><a href="#redes-contenido" class="hover:text-rose-500">Cuentas</a></li>
+        <li><a href="#contacto-contenido" class="hover:text-rose-500">Contacto</a></li>
+      </ul>
+    </div>
+
+    <!-- Menú mobile -->
+    <ul id="menu-mobile"
+      class="md:hidden hidden flex-col mt-4 space-y-3 text-lg text-neutral-300 bg-neutral-900/90 p-4 rounded-lg">
+      <li><a href="./index.html" class="block hover:text-rose-500">Desarrollo</a></li>
+      <li><a href="#sobre-contenido" class="block hover:text-rose-500">Sobre este perfil</a></li>
+      <li><a href="#servicios-contenido" class="block hover:text-rose-500">Servicios</a></li>
+      <li><a href="#herramientas-contenido" class="block hover:text-rose-500">Herramientas</a></li>
+      <li><a href="#portfolio-contenido" class="block hover:text-rose-500">Trabajos</a></li>
+      <li><a href="#redes-contenido" class="block hover:text-rose-500">Cuentas</a></li>
+      <li><a href="#contacto-contenido" class="block hover:text-rose-500">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const menuMobile = document.getElementById('menu-mobile');
+
+    menuBtn.addEventListener('click', () => {
+      menuMobile.classList.toggle('hidden');
+    });
+  </script>
+
+  <main class="flex flex-col">
+
+    <!-- Hero -->
+    <section id="home" class="relative h-screen overflow-hidden bg-neutral-950 flex items-center justify-center text-center px-4">
+      <div class="blob" style="width:340px;height:340px;top:-80px;left:-60px;background:var(--grad-pink);"></div>
+      <div class="blob" style="width:380px;height:380px;bottom:-100px;right:-80px;background:var(--grad-purple);"></div>
+      <div class="blob" style="width:260px;height:260px;bottom:20%;left:8%;background:var(--grad-cyan);opacity:.25;"></div>
+
+      <div class="relative max-w-2xl" style="z-index:1;" data-aos="fade-up" data-aos-duration="1000">
+        <span class="badge-creative">SEGUNDO OFICIO</span>
+        <h1 class="gradient-text text-3xl md:text-4xl font-bold mb-4 mt-4">Editora de Video &amp; Diseñadora de Contenido</h1>
+        <p class="text-lg text-neutral-300 mb-6">Social Media Analyst — contenido pensado para conectar y datos para saber si funciona.</p>
+        <div class="flex flex-col gap-3 justify-center">
+          <a href="https://wa.me/5493644454650" target="_blank" rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 px-4 py-2 border border-rose-600 hover:bg-rose-500/80 text-white text-center font-medium transition">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-5 h-5" />
+            Contactá
+          </a>
+          <a href="./index.html"
+            class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center font-medium transition">
+            ← Ver portafolio de desarrollo
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre este perfil -->
+    <section id="sobre-contenido" class="max-w-5xl mx-auto px-4 py-16">
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="photo-ring">
+          <img src="./img/Contenido/perfil.jpg" alt="Alejandra Romina Cáceres"
+            class="rounded-full object-cover block"
+            style="width:152px;height:152px;" />
+        </div>
+        <div class="text-center">
+          <h2 class="section-title text-3xl sm:text-4xl font-semibold mb-4">Sobre este perfil</h2>
+          <p class="text-neutral-300 text-lg leading-relaxed">
+            Además de desarrollar software, trabajo del lado creativo y estratégico de las redes sociales:
+            edito video, diseño piezas gráficas para publicaciones y campañas, y analizo métricas para
+            entender qué contenido funciona y por qué. La mirada analítica de mi otro oficio se traslada
+            acá en forma de decisiones basadas en datos, no solo en estética.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios-contenido" class="relative overflow-hidden bg-neutral-950 text-neutral-400 py-16">
+      <div class="blob" style="width:300px;height:300px;top:-60px;right:-60px;background:var(--grad-orange);opacity:.2;"></div>
+      <div class="relative max-w-6xl mx-auto px-4" style="z-index:1;">
+        <h2 class="section-title text-3xl sm:text-4xl font-semibold text-center mb-10">Servicios</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <!-- Servicio 1 -->
+          <div class="card-creative card-video" data-aos="zoom-in-up" data-aos-delay="0">
+            <div class="flex items-center space-x-3 mb-2">
+              <div class="icon-ring icon-video">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5l4.72-2.36A1 1 0 0121.75 9v6a1 1 0 01-1.53.85L15.75 13.5M4.5 6.75h9A1.5 1.5 0 0115 8.25v7.5a1.5 1.5 0 01-1.5 1.5h-9A1.5 1.5 0 013 15.75v-7.5a1.5 1.5 0 011.5-1.5z" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-white">Edición de video</h3>
+            </div>
+            <p class="text-base text-neutral-300">
+              Reels, shorts y video corto para redes: cortes con ritmo, subtítulos y estructura pensada para retener.
+            </p>
+          </div>
+
+          <!-- Servicio 2 -->
+          <div class="card-creative card-design" data-aos="zoom-in-up" data-aos-delay="100">
+            <div class="flex items-center space-x-3 mb-2">
+              <div class="icon-ring icon-design">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 3.75H4.5a.75.75 0 00-.75.75v4.5m15-5.25h-4.5m4.5 0v5.25m0 9v4.5a.75.75 0 01-.75.75h-4.5m-9.75 0H4.5a.75.75 0 01-.75-.75v-4.5" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-white">Diseño de contenido</h3>
+            </div>
+            <p class="text-base text-neutral-300">
+              Piezas gráficas para posts, carruseles y campañas, cuidando una identidad visual coherente por marca.
+            </p>
+          </div>
+
+          <!-- Servicio 3 -->
+          <div class="card-creative card-social" data-aos="zoom-in-up" data-aos-delay="200">
+            <div class="flex items-center space-x-3 mb-2">
+              <div class="icon-ring icon-social">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.5l4.5-4.5 3.75 3.75L21 3.75M21 3.75h-4.5M21 3.75v4.5" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18" />
+                </svg>
+              </div>
+              <h3 class="text-lg font-semibold text-white">Social Media Analyst</h3>
+            </div>
+            <p class="text-base text-neutral-300">
+              Calendario de contenido, seguimiento de métricas y ajustes de estrategia según lo que muestran los datos.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Herramientas -->
+    <section id="herramientas-contenido" class="max-w-5xl mx-auto px-4 py-16">
+      <h2 class="section-title text-3xl sm:text-4xl font-semibold text-center mb-10">Herramientas y software</h2>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <img src="./img/Contenido/bts-gimbal.jpg" alt="Grabando con gimbal en exteriores"
+          class="w-full md:w-1/2 object-cover rounded" style="aspect-ratio:3/4;" />
+        <div class="md:w-1/2 flex flex-wrap justify-center gap-3">
+
+          <span class="flex items-center gap-2 bg-neutral-800 text-neutral-300 text-xs px-3 py-1.5 rounded-xl shadow-sm border border-neutral-700 hover:bg-neutral-700 transition">
+            <img src="https://static.vecteezy.com/system/resources/previews/067/065/640/non_2x/capcut-logo-square-rounded-capcut-logo-capcut-logo-free-download-free-png.png" alt="CapCut" class="w-5 h-5 object-contain" />
+            CapCut
+          </span>
+
+          <span class="flex items-center gap-2 bg-neutral-800 text-neutral-300 text-xs px-3 py-1.5 rounded-xl shadow-sm border border-neutral-700 hover:bg-neutral-700 transition">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxFY_nQ99BZ1X2tlruV033LZQU6yhbOtGYG8S3A9M9ZFsYSRD8OGR5VhHI&s=10" alt="Adobe Creative Cloud" class="w-5 h-5 object-contain" />
+            Adobe Suite
+          </span>
+
+          <span class="flex items-center gap-2 bg-neutral-800 text-neutral-300 text-xs px-3 py-1.5 rounded-xl shadow-sm border border-neutral-700 hover:bg-neutral-700 transition">
+            <img src="https://static.vecteezy.com/system/resources/previews/032/329/175/non_2x/canva-icon-logo-symbol-free-png.png" alt="Canva" class="w-5 h-5 object-contain" />
+            Canva
+          </span>
+
+          <span class="flex items-center gap-2 bg-neutral-800 text-neutral-300 text-xs px-3 py-1.5 rounded-xl shadow-sm border border-neutral-700 hover:bg-neutral-700 transition">
+            <img src="https://cdn.simpleicons.org/figma" alt="Figma" class="w-5 h-5 object-contain" />
+            Figma
+          </span>
+
+          <span class="flex items-center gap-2 bg-neutral-800 text-neutral-300 text-xs px-3 py-1.5 rounded-xl shadow-sm border border-neutral-700 hover:bg-neutral-700 transition">
+            <img src="https://usevoe.com/logo.png" alt="Veo 3" class="w-5 h-5 object-contain" />
+            Veo 3 (IA)
+          </span>
+
+          <span class="flex items-center gap-2 bg-neutral-800 text-neutral-300 text-xs px-3 py-1.5 rounded-xl shadow-sm border border-neutral-700 hover:bg-neutral-700 transition">
+            <img src="https://cdn.simpleicons.org/meta" alt="Meta Business Suite" class="w-5 h-5 object-contain" />
+            Meta Business Suite
+          </span>
+
+          <span class="flex items-center gap-2 bg-neutral-800 text-neutral-300 text-xs px-3 py-1.5 rounded-xl shadow-sm border border-neutral-700 hover:bg-neutral-700 transition">
+            <img src="https://cdn.simpleicons.org/instagram" alt="Instagram" class="w-5 h-5 object-contain" />
+            Instagram
+          </span>
+
+          <span class="flex items-center gap-2 bg-neutral-800 text-neutral-300 text-xs px-3 py-1.5 rounded-xl shadow-sm border border-neutral-700 hover:bg-neutral-700 transition">
+            <img src="https://cdn.simpleicons.org/tiktok" alt="TikTok" class="w-5 h-5 object-contain" />
+            TikTok
+          </span>
+
+          <span class="flex items-center gap-2 bg-neutral-800 text-neutral-300 text-xs px-3 py-1.5 rounded-xl shadow-sm border border-neutral-700 hover:bg-neutral-700 transition">
+            <img src="https://cdn.simpleicons.org/facebook" alt="Facebook" class="w-5 h-5 object-contain" />
+            Facebook
+          </span>
+
+          <span class="flex items-center gap-2 bg-neutral-800 text-neutral-300 text-xs px-3 py-1.5 rounded-xl shadow-sm border border-neutral-700 hover:bg-neutral-700 transition">
+            <img src="https://analitica.digital/wp-content/uploads/2023/02/logo_lockup_analytics_icon_vertical_black_2x.png" alt="Google Analytics" class="w-5 h-5 object-contain" />
+            Google Analytics
+          </span>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio-contenido" class="bg-neutral-900 text-neutral-100 py-16 px-2 sm:px-4">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="section-title text-3xl sm:text-4xl font-semibold text-center mb-10">Trabajos</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6" style="max-width:900px;margin:0 auto;">
+
+          <div class="border border-neutral-700 rounded overflow-hidden bg-black flex items-center justify-center" style="aspect-ratio:9/16;">
+            <iframe src="https://drive.google.com/file/d/1uFcRVIhG5JotNyhHabTWxeC4MoAUg72I/preview"
+              class="w-full h-full" style="border:0;display:block;" allow="autoplay" allowfullscreen title="Un día con gimbal"></iframe>
+          </div>
+
+          <div class="border border-neutral-700 rounded overflow-hidden bg-black flex items-center justify-center" style="aspect-ratio:9/16;">
+            <iframe src="https://drive.google.com/file/d/1-4wr_IWyYMqSplgGG5mU-QX6_l9LPkbT/preview"
+              class="w-full h-full" style="border:0;display:block;" allow="autoplay" allowfullscreen title="Video de trabajo"></iframe>
+          </div>
+
+          <div class="border border-neutral-700 rounded overflow-hidden bg-black flex items-center justify-center" style="aspect-ratio:570/943;">
+            <img src="./img/Contenido/diseno-riin.png" alt="Identidad de marca RiiN — paleta, tipografía y variantes de logotipo"
+              class="w-full h-full object-cover" />
+          </div>
+
+          <div class="border border-neutral-700 rounded overflow-hidden bg-black flex items-center justify-center" style="aspect-ratio:633/986;">
+            <img src="./img/Contenido/diseno-riin-instagram.png" alt="Diseño de publicidad — mockup de perfil de Instagram RiiN"
+              class="w-full h-full object-cover" />
+          </div>
+
+          <div class="border border-neutral-700 rounded overflow-hidden bg-black flex items-center justify-center" style="aspect-ratio:538/987;">
+            <img src="./img/Contenido/diseno-invitacion-boda.png" alt="Diseño de invitación digital de casamiento"
+              class="w-full h-full object-cover" />
+          </div>
+
+          <div class="border border-neutral-700 rounded overflow-hidden bg-black flex items-center justify-center" style="aspect-ratio:667/980;">
+            <img src="./img/Contenido/trabajos-figma.png" alt="Proyectos de diseño en Figma"
+              class="w-full h-full object-cover" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Redes gestionadas -->
+    <section id="redes-contenido" class="max-w-5xl mx-auto px-4 py-16">
+      <h2 class="section-title text-3xl sm:text-4xl font-semibold text-center mb-10">Cuentas que gestioné</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+        <a href="https://www.instagram.com/sanchezpropiedades_sp/" target="_blank" rel="noopener noreferrer"
+          class="card-creative card-social flex items-center gap-3">
+          <div class="icon-ring icon-social">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-white font-semibold">Sánchez Propiedades</p>
+            <p class="text-neutral-400 text-sm">@sanchezpropiedades_sp</p>
+            <p class="text-sm mt-1"><span class="follower-count" data-target="17800" style="color:#22d3ee;font-weight:700;">0</span> <span class="text-neutral-500">seguidores</span></p>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/camposdellitoral_sp/" target="_blank" rel="noopener noreferrer"
+          class="card-creative card-social flex items-center gap-3">
+          <div class="icon-ring icon-social">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-white font-semibold">Campos del Litoral</p>
+            <p class="text-neutral-400 text-sm">@camposdellitoral_sp</p>
+            <p class="text-sm mt-1"><span class="follower-count" data-target="5186" style="color:#22d3ee;font-weight:700;">0</span> <span class="text-neutral-500">seguidores</span></p>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/riin.info/" target="_blank" rel="noopener noreferrer"
+          class="card-creative card-social flex items-center gap-3">
+          <div class="icon-ring icon-social">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-white font-semibold">RiiN</p>
+            <p class="text-neutral-400 text-sm">@riin.info</p>
+            <p class="text-sm mt-1"><span class="follower-count" data-target="850" style="color:#22d3ee;font-weight:700;">0</span> <span class="text-neutral-500">seguidores</span></p>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/tec.desarrollosoftware/" target="_blank" rel="noopener noreferrer"
+          class="card-creative card-social flex items-center gap-3">
+          <div class="icon-ring icon-social">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-white font-semibold">TEC Desarrollo de Software</p>
+            <p class="text-neutral-400 text-sm">@tec.desarrollosoftware</p>
+            <p class="text-sm mt-1"><span class="follower-count" data-target="104" style="color:#22d3ee;font-weight:700;">0</span> <span class="text-neutral-500">seguidores</span></p>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/kndstickers/" target="_blank" rel="noopener noreferrer"
+          class="card-creative card-social flex items-center gap-3">
+          <div class="icon-ring icon-social">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-white font-semibold">KND Stickers</p>
+            <p class="text-neutral-400 text-sm">@kndstickers</p>
+            <p class="text-sm mt-1"><span class="follower-count" data-target="1251" style="color:#22d3ee;font-weight:700;">0</span> <span class="text-neutral-500">seguidores</span></p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <script>
+      function animateFollowerCount(el, target, duration) {
+        let startTime = null;
+        function frame(ts) {
+          if (startTime === null) startTime = ts;
+          const progress = Math.min((ts - startTime) / duration, 1);
+          el.textContent = Math.floor(progress * target).toLocaleString('es-AR');
+          if (progress < 1) {
+            requestAnimationFrame(frame);
+          } else {
+            setTimeout(() => {
+              startTime = null;
+              el.textContent = '0';
+              requestAnimationFrame(frame);
+            }, 1500);
+          }
+        }
+        requestAnimationFrame(frame);
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.follower-count').forEach((el) => {
+          animateFollowerCount(el, parseInt(el.dataset.target, 10), 2200);
+        });
+      });
+    </script>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="contacto-contenido" class="text-center text-sm py-6 text-neutral-500">
+    © 2025 Alejandra Romina Cáceres | Editora de Video & Social Media Analyst
+    <div class="mt-2">
+      <a href="https://wa.me/5493644454650" target="_blank" rel="noopener noreferrer" class="text-rose-400 hover:underline">WhatsApp</a>
+      ·
+      <a href="https://www.instagram.com/riin.info/" target="_blank" rel="noopener noreferrer" class="text-rose-400 hover:underline">Instagram</a>
+      ·
+      <a href="./index.html" class="text-rose-400 hover:underline">Volver al portafolio de desarrollo</a>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true });
+  </script>
+
+</body>
+
+</html>

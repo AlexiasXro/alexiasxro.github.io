@@ -22,6 +22,28 @@
     .touch-pinch-zoom {
       touch-action: pinch-zoom;
     }
+
+    .nav-highlight {
+      position: relative;
+      font-weight: 700;
+      background: linear-gradient(90deg, #ec4899, #a855f7, #22d3ee, #ec4899);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: nav-gradient-shift 3s linear infinite, nav-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes nav-gradient-shift {
+      to {
+        background-position: 300% center;
+      }
+    }
+
+    @keyframes nav-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+    }
   </style>
 
 </head>
@@ -56,6 +78,7 @@
         <li><a href="#habilidades" class="hover:text-rose-500">Habilidades</a></li>
         <li><a href="#contacto" class="hover:text-rose-500">Contacto</a></li>
         <li><a href="#servicio" class="hover:text-rose-500">Servicios</a></li>
+        <li><a href="./contenido.html" class="nav-highlight">Contenido & Redes ✨</a></li>
       </ul>
     </div>
 
@@ -68,6 +91,7 @@
       <li><a href="#habilidades" class="block hover:text-rose-500">Habilidades</a></li>
       <li><a href="#contacto" class="block hover:text-rose-500">Contacto</a></li>
       <li><a href="#servicio" class="block hover:text-rose-500">Servicios</a></li>
+      <li><a href="./contenido.html" class="block nav-highlight">Contenido & Redes ✨</a></li>
     </ul>
   </nav>
 
@@ -622,37 +646,133 @@
             });
           </script>
 
-          <!-- Proyecto 4 (factura lite) 
+          <!-- Proyecto: Ecomaq (sistema de gestión para ferreterías) -->
           <div class="proyecto bg-neutral-900 p-4 rounded shadow relative">
-            <div class="relative">
-              <img src="https://via.placeholder.com/300x200/ff7f7f/333" alt="Proyecto Placeholder"
-                class="rounded object-contain w-full h-56 mb-4" />
-              <div id="overlay-proyecto4"
-                class="absolute inset-0 bg-rose-950/90 w-full h-56 text-neutral-300 text-md p-4 hidden rounded mb-4 flex flex-col justify-center overflow-y-auto">
-                <ul class="list-disc pl-5">
-                  <li>Aplicación web en desarrollo con Laravel 11, Blade y Tailwind CSS</li>
-                  <li>Funcionalidad principal: emisión de facturas y remitos automatizados</li>
-                  <li>Automatiza carga de información del comprador y procesos contables dentro de la factura</li>
-                  <li>Planea integración futura con AFIP o ARCA para gestión fiscal</li>
-                  <li>Cuenta con prototipos en Figma y frontend básico con suma de productos</li>
-                  <li>Actualmente en desarrollo activo, con funcionalidades en expansión</li>
-                </ul>
+            <div class="relative w-full h-96 rounded overflow-hidden mb-4">
+              <img src="./img/Ecomaq/demo1.png" alt="Ecomaq – Módulo de cuenta corriente"
+                class="w-full h-full object-cover object-top" />
 
+              <div id="overlay-ecomaq"
+                class="absolute inset-0 bg-rose-950/90 w-full h-full text-neutral-300 text-md p-4 hidden rounded flex flex-col justify-center overflow-y-auto">
+                <ul class="list-disc pl-5 my-4">
+                  <li>Sistema de gestión <strong>fullstack</strong> para ferreterías, desarrollado con <strong>Laravel 11</strong>, <strong>Blade</strong> y <strong>Tailwind CSS</strong>.</li>
+                  <li><strong>14 módulos activos</strong>: catálogo y proveedores, compras, stock multi-depósito, ventas, cobros y caja, cuenta corriente, reportes, personal, y usuarios y seguridad.</li>
+                  <li>Carga masiva de catálogo por <strong>Excel</strong>: vincula o crea productos automáticamente desde la lista de precios de cada proveedor.</li>
+                  <li><strong>5 niveles de precio</strong> por producto, sugeridos automáticamente según la condición fiscal del cliente.</li>
+                  <li>Presupuestos convertibles en venta, <strong>caja con arqueo real</strong> y <strong>cuenta corriente (fiado)</strong> con saldo actualizado automáticamente.</li>
+                  <li><strong>4 roles de usuario</strong> con permisos granulares para acciones sensibles como cobrar, anular, ajustar stock o cerrar caja.</li>
+                  <li>Respaldado por <strong>219 pruebas automáticas</strong>. Actualmente en desarrollo activo.</li>
+                </ul>
               </div>
             </div>
             <div class="flex flex-col gap-2">
-              <a href="#detalle-proyecto4"
-                class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition">
+              <button id="openEcomaq"
+                class="block px-4 py-2 bg-neutral-800 border border-rose-600 hover:bg-rose-900 text-white text-center rounded font-normal transition">
                 Ver demo
-              </a>
-              <button data-toggle-overlay="proyecto4"
+              </button>
+              <button data-toggle-overlay="ecomaq"
                 class="block px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-center rounded-xs font-normal transition mt-2">
                 Ver detalles técnicos
               </button>
             </div>
           </div>
--->
-        
+
+          <!-- Modal Ecomaq -->
+          <div id="ecomaqModal" class="fixed inset-0 z-50 hidden">
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+
+            <!-- Contenedor -->
+            <div class="relative mx-auto mt-0 md:mt-10 max-w-5xl h-screen md:h-auto
+           bg-black md:bg-neutral-900 text-white
+           md:rounded-lg md:border md:border-rose-600 shadow-xl">
+
+              <!-- Header (solo desktop) -->
+              <div class="hidden md:flex items-center justify-between px-6 py-4 border-b border-neutral-700">
+                <h2 class="text-lg font-semibold">Ecomaq · Demo del sistema</h2>
+                <button id="closeEcomaq" class="text-neutral-400 hover:text-white text-xl">&times;</button>
+              </div>
+
+              <!-- Botón cerrar mobile -->
+              <button id="closeEcomaqMobile"
+                class="md:hidden absolute top-3 right-3 z-50 bg-black/70 text-white rounded-full w-10 h-10 text-xl flex items-center justify-center">
+                ✕
+              </button>
+
+              <!-- Body -->
+              <div class="p-0 md:p-6 h-full">
+
+                <!-- Carrusel -->
+                <div class="relative overflow-hidden h-full md:h-auto">
+
+                  <div id="ecomaqSlides" class="flex transition-transform duration-500 h-full">
+
+                    <img src="img/Ecomaq/demo1.png"
+                      class="w-full h-full flex-shrink-0 object-contain"
+                      alt="Ecomaq – Módulo de cuenta corriente: límites de crédito y saldos por cliente">
+
+                  </div>
+
+                  <!-- Controles -->
+                  <button id="prevEcomaq"
+                    class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 px-4 py-3 rounded-full text-xl">
+                    ‹
+                  </button>
+
+                  <button id="nextEcomaq"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 px-4 py-3 rounded-full text-xl">
+                    ›
+                  </button>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+
+              const modal = document.getElementById('ecomaqModal');
+              const openBtn = document.getElementById('openEcomaq');
+              const closeBtn = document.getElementById('closeEcomaq');
+              const closeMobile = document.getElementById('closeEcomaqMobile');
+
+              const slides = document.getElementById('ecomaqSlides');
+              const totalSlides = slides.children.length;
+              let index = 0;
+
+              openBtn.addEventListener('click', () => {
+                modal.classList.remove('hidden');
+                index = 0;
+                updateSlide();
+              });
+
+              closeBtn?.addEventListener('click', () => {
+                modal.classList.add('hidden');
+              });
+
+              closeMobile.addEventListener('click', () => {
+                modal.classList.add('hidden');
+              });
+
+              document.getElementById('nextEcomaq').addEventListener('click', () => {
+                index = (index + 1) % totalSlides;
+                updateSlide();
+              });
+
+              document.getElementById('prevEcomaq').addEventListener('click', () => {
+                index = (index - 1 + totalSlides) % totalSlides;
+                updateSlide();
+              });
+
+              function updateSlide() {
+                slides.style.transform = `translateX(-${index * 100}%)`;
+              }
+
+            });
+          </script>
+
         <script>
           // Escucha todos los clicks en botones con data-toggle-overlay
           document.addEventListener('DOMContentLoaded', () => {
